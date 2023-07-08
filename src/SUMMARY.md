@@ -1,5 +1,6 @@
 # Summary
 
+[Translator's Note](./translators_note.md)
 [Introduction](./introduction.md)
 
 - [Pronunciation Points](./pronunciation_points.md)
