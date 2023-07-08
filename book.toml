@@ -1,0 +1,6 @@
+[book]
+authors = ["Diarmuid Ó Sé"]
+language = "en"
+multilingual = false
+src = "src"
+title = "The Living Language - Corca Dhuibhne"
