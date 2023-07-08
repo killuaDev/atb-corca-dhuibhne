@@ -1,5 +1,7 @@
 # Summary
 
+[Introduction](./introduction.md)
+
 - [Pronunciation Points](./pronunciation_points.md)
 - [Nouns](./nouns.md)
 - [Adjectives](./adjectives.md)
