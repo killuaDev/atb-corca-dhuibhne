@@ -1,5 +1,5 @@
 # Introduction
-What's in this book is a short account fo the most important traits of the Irish of Corca Dhuihne. It will be useful for students who are attending courses on the spoken languages and to others who are interested in the Gaeltacht and the Irish of the Gaeltacht.
+What's in this book is a short account of the most important traits of the Irish of Corca Dhuihne. It will be useful for students who are attending courses on the spoken languages and to others who are interested in the Gaeltacht and the Irish of the Gaeltacht.
 
 The principal parts of speech are described and samples from living speech are given as demonstartion the whole way through. Examples and forms of words in the dialect were put in italics, and the spelling was amended to show the pronunciation more clearly. These samples are based on material collected by the author in Corca Dhuibhne for the past 20 years.
 

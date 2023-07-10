@@ -9,6 +9,7 @@ The possessive particles in the dialect are as follows: *mo, do, a, a, ár, úr,
 | 3m    | *a cheann son* | *a thig sin* | *(a) a oifig sin* |
 | 3f    | *a ceann son*  | *a tig sin*  | *a hoifig sin*    | 
 
+
 | Iolra |                |              |                 |
 | ----- | -------------- | ------------ | --------------- |
 | 1     | *ár gceann-na* | *ár dtigna*  | *ár n-oifigna*  |

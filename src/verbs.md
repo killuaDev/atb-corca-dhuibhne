@@ -248,7 +248,7 @@ Among these are *coisricíonn, fuiligíonn* (= fulaingíonn), *loirigíonn, tair
 *-ig* isn't added to this verb in the past or 2nd singular imperative; the forms are *dh'íns* or *íns* respectively. The forms one would expect are not used in the future and conditional i.e. *ínseóig* and *dh'ínseoch.* The forms used are *neósaig* and *neósach*, which correspond to the irregular verb *niseann.*
 
 ## 8.8 Irregular Verbs
-These are the irregular verbs: *tá, beireann, cíonn, cloiseann, deireann, dineann, faiggheann, gaigheann, itheann, niseann, téann, tagann, tugann.*
+These are the irregular verbs: *tá, beireann, cíonn, cloiseann, deireann, dineann, faigheann, gaigheann, itheann, niseann, téann, tagann, tugann.*
 
 Only the irregular forms are given below, except for *tá* where all the forms are given.
 
