@@ -36,12 +36,12 @@ The stress isn't on *-ach* if *-th-* is the consonant before it or if there's a 
 - ***brón**ach*
 - ***út**amáil*
 
-### Exceptions
+## Exceptions
 (i) It's normal, particularly in some set phrases, to move the stress from the last syllable to the first syllable of a word when the word is followed by a stressed syllable:
 - *cailín* but *cailín óg*
-- *gairdín but gairdín úll*
-- *múinteoir but múinteoir scoile*
-- *feir(i)meoir but feir(i)meoir muar*
+- *gairdín* but *gairdín úll*
+- *múinteoir* but *múinteoir scoile*
+- *feir(i)meoir* but *feir(i)meoir muar*
   
 (ii) According to the rules given already, the stress falls on the first syllable in words with the vowel pattern long-short-long e.g. ***úd**arás, **út**amáil, **cún**tanós.* There are exceptions relating to the forms of verbs and adjectives. In second conjugation verbs it's always the *-(a)í-* or the *-(e)ó-* which is stressed, even if that's in the third syllable. Therefore:
 - *cea**nnaíonn** cea**nnóig***
@@ -135,7 +135,7 @@ Usually these are said like *-ig*:
 - chuaigh *chuaig*
 - suigh *suig*
 
-### Exceptions
+## Exceptions
 The *dh/gh* is dropped in the following situations:
 (i) In multisyllabic words, before a pronoun acting as a subject:
 - *cheanna sé tig*
@@ -199,3 +199,4 @@ Of course, it's the  long vowel or diphthong that's said when the *ll, nn, rr* i
 - *béal* /b´ial/ or /b´iəl/
   
 /e:/ is said in songs and poetry, for example *ar fharraigí tréana.* /e:/ is also said in the second syllable, e.g. *buidéal, siúinéara;* after *r*, e.g. *réab, réal;* in the verbs *léann, téann;* and in words like *véarsa, léas ('lease, lace'), gléas ('shine')* and *mo léan.* *éi* stays as /e:/, for example in the genitive forms *éin, féir, béil buidéil.*
+
