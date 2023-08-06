@@ -55,8 +55,8 @@ Some speakers stress the *-(a)í* in comparative forms of adjectives:
 However the *-(a)í* isn't stressed in the third syllable if there's a long vowel before it:
 - *sao**ráid**each níos sao**ráid**í*
   
-(iii) The stress falls on the first syllable in the following words despite the above rules: *an t-áirseoir, aturnae, buíocán (uibh), Caitleacaí, eidhneán, gealacán (uibh), lamhancán, lamhnán.*
-The first syllable is stressed in lots of loans from English as well, e.g. *baitsiléir, bocaidí* (iolra), *fiúsaí, meagalsaí* (iolra).
+(iii) The stress falls on the first syllable in the following words despite the above rules: *an t-**áir**seoir, **at**urnae, **buíoc**án (uibh), **Cait**leacaí, **eidhn**eán, **geal**acán (uibh), **lamhan**cán, **lamhn**án.*
+The first syllable is stressed in lots of loans from English as well, e.g. ***baits**iléir, **boc**aidí* (iolra), ***fiú**saí, **meag**alsaí* (iolra).
 
 ## 1.2 Loss of Vowels in the Syllable before the Stress
 The short vowel is lost in the syllable before the stress in many words, if *r*, *l*, or *n* are following that vowel:
