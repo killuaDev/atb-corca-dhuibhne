@@ -38,10 +38,10 @@ The stress isn't on *-ach* if *-th-* is the consonant before it or if there's a 
 
 ## Exceptions
 (i) It's normal, particularly in some set phrases, to move the stress from the last syllable to the first syllable of a word when the word is followed by a stressed syllable:
-- *cailín* but *cailín óg*
-- *gairdín* but *gairdín úll*
-- *múinteoir* but *múinteoir scoile*
-- *feir(i)meoir* but *feir(i)meoir muar*
+- *cail**ín** - **cail**ín **óg***
+- *gair**dín** - **gair**dín **úll***
+- *múin**teoir** - **múin**teoir **scoil**e*
+- *feir(i)**meoir** - **feir**(i)meoir **muar***
   
 (ii) According to the rules given already, the stress falls on the first syllable in words with the vowel pattern long-short-long e.g. ***úd**arás, **út**amáil, **cún**tanós.* There are exceptions relating to the forms of verbs and adjectives. In second conjugation verbs it's always the *-(a)í-* or the *-(e)ó-* which is stressed, even if that's in the third syllable. Therefore:
 - *cea**nnaíonn** cea**nnóig***

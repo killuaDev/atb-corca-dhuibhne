@@ -414,9 +414,9 @@ The 2nd singular *deire* is used in the version *Cad deire?*
 
 |                        |                 |           |
 | ---------------------- | --------------- | --------- |
-| 1. *déarha mé/déarhad* | *déarhaimís(t)* |           |
-| 2. *déarfá*            | *déarhach sibh* |           |
-| 3. *déarhach sé/sí*    | *déarhaidís(t)* | *déarfaí* | 
+| 1. *déarha mé/déarhad* | *déarhaimíd* |           |
+| 2. *déarha tú/déarhair*            | *déarha sibh* |           |
+| 3. *déarha sé/sí*    | *déarha siad/déarhaid* | *déarfar* | 
 
 **Conditional:** *déarhach*
 
