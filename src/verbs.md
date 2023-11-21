@@ -61,7 +61,7 @@ Tables of the verb forms of *dúnann, glaenn,* and *ceannaíonn* in 8.5-8..7 bel
 | ------------------- | ---------------- | ------------ |
 | 1. *chuirinn*       | *chuirimís(t)*   |              |
 | 2. *chuirtá*        | *chuireach sibh* |              |
-| 3. *chureach sé/sí* | *chuiridís(t)*   | *c(h)uirtaí* | 
+| 3. *chuireach sé/sí* | *chuiridís(t)*   | *c(h)uirtaí* | 
 
 **Conditional:** *chuireach*
 
