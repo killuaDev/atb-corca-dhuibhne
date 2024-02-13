@@ -1,0 +1,498 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Prepositions - The Living Language - Corca Dhuibhne</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="translators_note.html">Translator's Note</a></li><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="pronunciation_points.html"><strong aria-hidden="true">1.</strong> Pronunciation Points</a></li><li class="chapter-item expanded "><a href="nouns.html"><strong aria-hidden="true">2.</strong> Nouns</a></li><li class="chapter-item expanded "><a href="adjectives.html"><strong aria-hidden="true">3.</strong> Adjectives</a></li><li class="chapter-item expanded "><a href="pronouns.html"><strong aria-hidden="true">4.</strong> Pronouns</a></li><li class="chapter-item expanded "><a href="possessive_particles.html"><strong aria-hidden="true">5.</strong> Possessive Particles</a></li><li class="chapter-item expanded "><a href="prepositions.html" class="active"><strong aria-hidden="true">6.</strong> Prepositions</a></li><li class="chapter-item expanded "><a href="numbers.html"><strong aria-hidden="true">7.</strong> Numbers</a></li><li class="chapter-item expanded "><a href="verbs.html"><strong aria-hidden="true">8.</strong> Verbs</a></li><li class="chapter-item expanded "><a href="the_copula.html"><strong aria-hidden="true">9.</strong> The Copula</a></li><li class="chapter-item expanded "><a href="vocabulary.html"><strong aria-hidden="true">10.</strong> Vocabulary</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Living Language - Corca Dhuibhne</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="6-prepositions"><a class="header" href="#6-prepositions">6. Prepositions</a></h1>
+<h2 id="61-there-are-two-types-of-prepositions"><a class="header" href="#61-there-are-two-types-of-prepositions">6.1 There are two types of prepositions:</a></h2>
+<ul>
+<li>(i) Simple prepositions, e.g. <em>as, dó, ó</em></li>
+<li>(ii) Compound prepositions (i.e. phrases which act as prepositions), e.g.  <em>as chionn, ar nós, le linn.</em></li>
+</ul>
+<h2 id="62-simple-prepositions"><a class="header" href="#62-simple-prepositions">6.2 Simple Prepositions</a></h2>
+<p>The forms of the simple prepositions are given in the left column below. The spelling <em>eir</em> is used instead of <em>air</em> in this chapter. The examples on the right column show which of them lenite words starting in consonants and which don't: <em>chuin, timpeall, trasna</em> and <em>tréis</em> take the tuiseal ginideach.</p>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td><em>aige</em> (= ag)</td><td><em>aige baile</em></td></tr>
+<tr><td><em>eir</em> (=ar)</td><td><em>eir Sheán, eir bior</em></td></tr>
+<tr><td><em>as</em></td><td><em>as bhun an mhála, as cúram</em></td></tr>
+<tr><td><em>chuin</em> (= chun, chuig)</td><td><em>chuin bíg</em></td></tr>
+<tr><td><em>cois</em></td><td><em>cois tine</em></td></tr>
+<tr><td><em>do [1]</em> (= 'to, for')</td><td><em>é a thúirt do Sheán</em></td></tr>
+<tr><td><em>do [2]</em> (= 'of, from')</td><td><em>é a bhaint do Sheán</em></td></tr>
+<tr><td><em>fara/farae</em></td><td><em>fara Sheán, farae Seán</em></td></tr>
+<tr><td><em>fé</em> (= faoi)</td><td><em>fé bhord</em></td></tr>
+<tr><td><em>go</em></td><td><em>oíche go maidean, ag dul go Trá Lí</em></td></tr>
+<tr><td><em>(go) dtí</em></td><td><em>fan go dtí tráthnóna, ag dul go dtí áiteanna eile</em></td></tr>
+<tr><td><em>i</em></td><td><em>i bpoll</em></td></tr>
+<tr><td><em>(i)deir, (i)dir</em></td><td><em>deir/dir Chorcaig is Chill Airne</em> ('between')</td></tr>
+<tr><td><em>lé</em> (= le)</td><td><em>lé fearg</em></td></tr>
+<tr><td><em>mar</em></td><td><em>ag obair mar mhúinteoir</em></td></tr>
+<tr><td><em>ó</em></td><td><em>ag eighrí ó thalamh</em></td></tr>
+<tr><td><em>roim</em> (= roimh)</td><td><em>roim dheire na bliana</em></td></tr>
+<tr><td><em>sochas/seachas</em></td><td><em>sochas aon duine eile</em></td></tr>
+<tr><td><em>thar, thara, tharae, tharais</em></td><td><em>thar chlaí an ghoirt, thar claí, thara Sheán, tharae Seán, tharais Mícheál</em></td></tr>
+<tr><td><em>timpeall</em></td><td><em>timpeall Chinn Sléibhe</em></td></tr>
+<tr><td><em>trasna</em></td><td><em>ag dul trasna na páirce</em></td></tr>
+<tr><td><em>tréis/téis/héis</em></td><td><em>tréis dínnéir</em></td></tr>
+<tr><td><em>trí</em></td><td><em>trí bhun an mhála</em></td></tr>
+</tbody></table>
+</div>
+<p><em>eir, as</em> and <em>thar</em> can be used without lenition. The lenition doesn't occur on indefinite nouns in certain phrases:</p>
+<ul>
+<li><em>as cúram, as póca, as Béarla</em></li>
+<li><em>eir barra, eir bior eir bórd, eir fad</em></li>
+<li><em>thar barr, thar claí, thar meon</em></li>
+</ul>
+<p>When most of the simple prepositions are put before word beginning with a vowel no change is done to the preposition or the word. These are the exceptions:</p>
+<ul>
+<li><em>do [1]</em> - <em>tabhair d'Áine é</em> (or <em>tabhair do Áine é</em>)</li>
+<li><em>do [2]</em> - <em>bain d'Áine é</em> (or <em>bain do Áine é</em>)</li>
+<li><em>i</em> - <em>in Éirinn</em></li>
+<li><em>go</em> - <em>a' teacht go hÉirinn</em></li>
+<li><em>lé</em> - <em>a' caint lé hÁinne</em></li>
+</ul>
+<h2 id="63-simple-prepositions-in-compounds-with-other-particles"><a class="header" href="#63-simple-prepositions-in-compounds-with-other-particles">6.3 Simple prepositions in compounds with other particles</a></h2>
+<p>When most of the simple prepositions are used before the article or before possessive particles, they make a compound with them in various ways, e.g. <em>do + an → don, do + na → dosna, do + a → dá, dona.</em> The forms of those compounds are shown below. <em>a chéile</em> will be used to show <em>a</em> 'his', <em>a</em> 'her', and <em>a</em> 'their'. <em>as</em> is included here for the sake of comparison, even though it doesn't form any compounds with other particles. Preposition + article is usually followed by eclipsis, except for <em>i</em> + article:</p>
+<div class="table-wrapper"><table><thead><tr><th>Alt san uatha</th><th>Alt san iolra</th><th>Mír shealbhach</th></tr></thead><tbody>
+<tr><td><em>aigen ngeata</em></td><td><em>aigesna daoine</em></td><td><em>aigena chéile</em></td></tr>
+<tr><td><em>eir a' gclaí</em></td><td><em>er na capaill</em></td><td><em>eir a chéile</em></td></tr>
+<tr><td><em>as a' dtig</em></td><td><em>as na tithe</em></td><td><em>as a chéile</em></td></tr>
+<tr><td><em>don bhfear</em></td><td><em>dosna fearaibh</em></td><td><em>dá chéile/dona chéile</em></td></tr>
+<tr><td><em>farais an gcuid seo</em></td><td><em>farais na cinn eile</em></td><td><em>farais a chéile</em></td></tr>
+<tr><td><em>fén mbord</em></td><td><em>fésna búird</em></td><td><em>féna chéile</em></td></tr>
+<tr><td><em>(go) dtín mbórd</em></td><td><em>(go) dtísna gaolta</em></td><td><em>(go) dtína chéile</em></td></tr>
+<tr><td><em>(in)sa ghort</em></td><td><em>(in)sa goirt</em></td><td><em>ina chéile</em></td></tr>
+<tr><td><em>(in)sa bhfocal</em></td><td><em>(in)sa focail</em></td><td></td></tr>
+<tr><td><em>(in)sa tslí</em></td><td><em>(in)sa slite</em></td><td></td></tr>
+<tr><td><em>(in)san áit</em></td><td><em>(in)sa háiteanna</em></td><td></td></tr>
+<tr><td><em>leis an gcasúr</em></td><td><em>leis na daoine, lésna daoine</em></td><td><em>léna chéile, lé chéile</em></td></tr>
+<tr><td><em>ón mbord</em></td><td><em>ósna búird</em></td><td><em>óna chéile/ó chéile</em></td></tr>
+<tr><td><em>roimis an gcogadh</em></td><td><em>roimis na báid</em></td><td><em>roimis a chéile/roimena chéile</em></td></tr>
+<tr><td><em>tharais an dtig</em></td><td><em>tharais na tithe</em></td><td><em>tharana chéile tharna cheart</em></td></tr>
+<tr><td><em>trís/tríd an bhféar</em></td><td><em>trísna goirt</em></td><td><em>trína chéile/trí chéile</em></td></tr>
+</tbody></table>
+</div>
+<h2 id="extra-notes"><a class="header" href="#extra-notes">Extra Notes:</a></h2>
+<p>(i) The prepositions which take <em>s</em> before <em>na</em> also take it before <em>gach (aon), nach aon</em>, e.g. <em>aiges nach éinne, dos gach éinne, ós nach aon áit;</em> <em>i</em> uses the form <em>ins</em> or <em>is</em>, e.g. <em>ins gach aon áit, is nach aon cheann acu.</em></p>
+<p>(ii) <em>sa</em> eclipses the words <em>breis</em> and <em>bliain</em>, in phrases like <em>seachtain sa mbreis, uair sa mbliain, uair sa mí.</em></p>
+<p>(iii) <em>sa</em> takes the place of <em>sna</em> in the plural.</p>
+<p>(iv) There's a choice between <em>lé</em> and <em>lé h-</em> before <em>ár, úr:</em></p>
+<ul>
+<li><em>á dhéisiú lé hár lámha</em></li>
+<li><em>a' feitheamh lé úr muintir</em></li>
+</ul>
+<p>(v) <em>roime na</em> can be said when making reference to the time:</p>
+<ul>
+<li><em>roime na haon déag</em></li>
+</ul>
+<p>(vi) There are a few ways to use <em>roim</em> referencing Christmas and Easter:</p>
+<ul>
+<li><em>roim Nollaig/ roimis an Nollaig/ roimis na Nollag</em></li>
+<li><em>roim Cháisc/ roimis an gCáisc/ roimis na Cásca</em></li>
+</ul>
+<p>The third one of them is spreading a lot  because it matches <em>tréis na Nollag, tréis na Cásca.</em></p>
+<p>(vii) When a preposition ending with a vowel is used before <em>ár, úr</em> (bhur), <em>n</em> is put between them normally: <em>aigean ár rang, in úr rang.</em> Often the <em>n</em> isn't used if the preposition ends on a long vowel, e.g. <em>farae ár gcairde, fé ár dtig, ó ár dtig.</em></p>
+<h2 id="64-meanings-of-the-word-do"><a class="header" href="#64-meanings-of-the-word-do">6.4 Meanings of the word <em>do</em></a></h2>
+<p>The words <em>de</em> and <em>do</em> have fallen together in the dialect. <em>do</em> is used whether 'to, for' or 'of, from' is meant:</p>
+<ul>
+<li><em>rud a thabhairt do dhuine/ é a thabhairt do</em></li>
+<li><em>rud a bhaint do dhuine/ é a bhaint do</em></li>
+</ul>
+<p>Although there's still a difference between most of the personal forms (<em>dom, duit...</em> and <em>díom, díot...</em>) they are being mixed as well:</p>
+<ul>
+<li><em>Bain díot do chasóg</em> or <em>bain duit do chasóg</em></li>
+<li><em>Lastoir dínn</em> or <em>Lastoir duinn</em></li>
+</ul>
+<p><em>díom</em> etc. are used with <em>cur</em> in the following phrase:</p>
+<ul>
+<li><em>Cuir díot</em></li>
+<li><em>B'fhearra dhom cur díom</em></li>
+</ul>
+<h2 id="66-personal-forms-of-the-prepositions"><a class="header" href="#66-personal-forms-of-the-prepositions">6.6 Personal forms of the prepositions</a></h2>
+<p>Bold print is used below to show the position of stress.</p>
+<div class="table-wrapper"><table><thead><tr><th><em>aige</em> (= ag)</th><th></th><th></th></tr></thead><tbody>
+<tr><td>1</td><td><em>a<strong>gum</strong></em></td><td><em>a<strong>guinn</strong></em></td></tr>
+<tr><td>2</td><td><em>a<strong>gut</strong></em></td><td><em>a<strong>guibh</strong></em></td></tr>
+<tr><td>3m</td><td><em>i<strong>ge</strong></em></td><td><em>a<strong>cu</strong></em></td></tr>
+<tr><td>3f</td><td><em>i<strong>ci</strong></em></td><td></td></tr>
+</tbody></table>
+</div><div class="table-wrapper"><table><thead><tr><th><em>eir</em> (= ar)</th><th></th><th></th></tr></thead><tbody>
+<tr><td>1</td><td><em>oram, a<strong>rum</strong></em></td><td><em>orainn, a<strong>ruinn</strong></em></td></tr>
+<tr><td>2</td><td><em>ort</em></td><td><em>oraibh, a<strong>ruibh</strong></em></td></tr>
+<tr><td><em>3m</em></td><td><em>eir</em></td><td><em>ortha, ar<strong>thu</strong></em></td></tr>
+<tr><td><em>3f</em></td><td><em>eirthe, irthe, ir<strong>thi</strong></em></td><td></td></tr>
+</tbody></table>
+</div><div class="table-wrapper"><table><thead><tr><th><em>as</em></th><th></th><th></th></tr></thead><tbody>
+<tr><td>1</td><td><em>asam, a<strong>sum</strong></em></td><td><em>asainn, a<strong>suinn</strong></em></td></tr>
+<tr><td>2</td><td><em>asat, a<strong>sut</strong></em></td><td><em>asaibh, a<strong>suibh</strong></em></td></tr>
+<tr><td>3m</td><td><em>as</em></td><td><em>asta</em></td></tr>
+<tr><td>3f</td><td><em>aiste</em></td><td></td></tr>
+</tbody></table>
+</div>
+<p>The first and second person forms can be made with <em>ast-</em> as well (as is done with the third person):</p>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th><th></th></tr></thead><tbody>
+<tr><td>1</td><td><em>astam, as<strong>tum</strong></em></td><td><em>astainn, as<strong>tuinn</strong></em></td></tr>
+<tr><td>2.</td><td><em>astat, as<strong>tut</strong></em></td><td><em>astaibh, as<strong>tuibh</strong></em></td></tr>
+</tbody></table>
+</div><div class="table-wrapper"><table><thead><tr><th><em>chuin</em></th><th></th><th></th></tr></thead><tbody>
+<tr><td>1</td><td><em>chúm</em></td><td><em>chúinn</em></td></tr>
+<tr><td>2</td><td><em>chút</em></td><td><em>chúibh</em></td></tr>
+<tr><td>3m</td><td><em>chuige</em></td><td><em>chútha</em></td></tr>
+<tr><td>3f</td><td><em>chúithe</em></td><td></td></tr>
+</tbody></table>
+</div><div class="table-wrapper"><table><thead><tr><th><em>do</em> (broad)</th><th></th><th></th></tr></thead><tbody>
+<tr><td>1</td><td><em>dom</em></td><td><em>dúinn, duinn</em></td></tr>
+<tr><td>2</td><td><em>duit</em></td><td><em>duibh</em></td></tr>
+<tr><td>3m</td><td><em>do</em></td><td><em>dóibh, doibh</em> (the vowel /o/ here)</td></tr>
+</tbody></table>
+</div><div class="table-wrapper"><table><thead><tr><th><em>do</em> (slender)</th><th></th><th></th></tr></thead><tbody>
+<tr><td>1</td><td><em>díom</em></td><td><em>dínn</em></td></tr>
+<tr><td>2</td><td><em>díot</em></td><td><em>díbh</em></td></tr>
+<tr><td>3f</td><td><em>di</em></td><td><em>díobh</em></td></tr>
+</tbody></table>
+</div><div class="table-wrapper"><table><thead><tr><th><em>fara(e)</em></th><th></th><th></th></tr></thead><tbody>
+<tr><td>1</td><td><em>faram</em></td><td><em>farainn</em></td></tr>
+<tr><td>2</td><td><em>farat</em></td><td><em>faraibh</em></td></tr>
+<tr><td>3m</td><td><em>farais</em></td><td><em>faratha, farótha</em></td></tr>
+<tr><td>3f</td><td><em>faraeithe</em></td><td></td></tr>
+</tbody></table>
+</div>
+<p>Stress: <em><strong>far</strong>ae, <strong>far</strong>aeithe or fa</em><em>rae</em><em>ithe, <strong>far</strong>ótha or fa</em><em>rót</em>*ha.* These forms are all dying out. More often people say <em>in aenacht liom</em> (<em>leat</em> etc.) or <em>far(a) liom</em> (<em>leat</em> etc.), but there's still a choice between them:</p>
+<ul>
+<li><em>Cé bhí farat?</em></li>
+<li><em>Cé bhí far(a) leat?</em></li>
+<li><em>Cé bhí in aenacht leat?</em></li>
+</ul>
+<div class="table-wrapper"><table><thead><tr><th><em>fé</em></th><th></th><th></th></tr></thead><tbody>
+<tr><td>1</td><td><em>fúm</em></td><td><em>fúinn</em></td></tr>
+<tr><td>2</td><td><em>fút</em></td><td><em>fúibh</em></td></tr>
+<tr><td>3m</td><td><em>fé</em></td><td><em>fútha</em></td></tr>
+<tr><td>3f</td><td><em>fúithe</em></td><td></td></tr>
+</tbody></table>
+</div><div class="table-wrapper"><table><thead><tr><th><em>i</em></th><th></th><th></th></tr></thead><tbody>
+<tr><td>1</td><td><em>unam, a<strong>num</strong></em></td><td><em>unainn, a<strong>nuinn</strong></em></td></tr>
+<tr><td>2</td><td><em>unat, a<strong>nut</strong></em></td><td><em>unaibh, a<strong>nuibh</strong></em></td></tr>
+<tr><td>3m</td><td><em>ann, an</em></td><td><em>únta, annta</em></td></tr>
+<tr><td>3f</td><td><em>ínte</em></td><td></td></tr>
+</tbody></table>
+</div>
+<p>The first vowel can be lost and the second vowel can be weakened in the first and second person:</p>
+<ul>
+<li><em>'nam héin</em> (ionam féin)</li>
+</ul>
+<div class="table-wrapper"><table><thead><tr><th><em>id(e)ir</em></th><th>(plural forms only)</th></tr></thead><tbody>
+<tr><td>1</td><td><em>eadarainn, eatarainn</em></td></tr>
+<tr><td>2</td><td><em>eadaraibh, eataraibh</em></td></tr>
+<tr><td>3</td><td><em>eatartha</em></td></tr>
+</tbody></table>
+</div><div class="table-wrapper"><table><thead><tr><th>lé</th><th></th><th></th></tr></thead><tbody>
+<tr><td>1</td><td><em>liom</em></td><td><em>linn</em></td></tr>
+<tr><td>2</td><td><em>leat</em></td><td><em>libh</em></td></tr>
+<tr><td>3m</td><td><em>leis</em></td><td><em>leó, leótha</em></td></tr>
+<tr><td>3f</td><td><em>lé, léithe</em></td><td></td></tr>
+</tbody></table>
+</div><div class="table-wrapper"><table><thead><tr><th><em>ó</em></th><th></th><th></th></tr></thead><tbody>
+<tr><td>1</td><td><em>bhuam</em></td><td><em>bhuainn</em></td></tr>
+<tr><td>2</td><td><em>bhuait</em></td><td><em>bhuaibh</em></td></tr>
+<tr><td>3m</td><td><em>bhuaig</em></td><td><em>bhuatha</em></td></tr>
+<tr><td>3b</td><td><em>bhuaithe</em></td><td></td></tr>
+</tbody></table>
+</div><div class="table-wrapper"><table><thead><tr><th><em>roim</em></th><th></th><th></th></tr></thead><tbody>
+<tr><td>1</td><td><em>róm/rúinn</em></td><td><em>róinn/rúinn</em></td></tr>
+<tr><td>2</td><td><em>rót/rút</em></td><td><em>róibh/rúibh</em></td></tr>
+<tr><td>3m</td><td><em>roimis</em></td><td><em>rómpa/rúmpa</em></td></tr>
+<tr><td>3f</td><td><em>roímpe</em></td><td></td></tr>
+</tbody></table>
+</div><div class="table-wrapper"><table><thead><tr><th><em>thar(ae)</em></th><th></th><th></th></tr></thead><tbody>
+<tr><td>1</td><td><em>tharam</em></td><td><em>tharainn</em></td></tr>
+<tr><td>2</td><td><em>tharat</em></td><td><em>tharaibh</em></td></tr>
+<tr><td>3m</td><td><em>tharais</em></td><td><em>thársta, tharótha</em></td></tr>
+<tr><td>3f</td><td><em>tháirste, tharaeithe</em></td><td></td></tr>
+</tbody></table>
+</div>
+<p>Stress: <em><strong>tha</strong>rae, <strong>thar</strong>aeithe</em> or <em>tha<strong>rae</strong>ithe, <strong>thar</strong>ótha</em> or <em>tha<strong>róth</strong>a.</em>
+<em>thar(a) + liom</em> etc. can be used in place of the forms above:</p>
+<ul>
+<li><em>ghaigheas thar leat ar an mbóthar</em></li>
+<li><em>ghaibh sé thara linn</em></li>
+</ul>
+<div class="table-wrapper"><table><thead><tr><th><em>trí</em></th><th></th><th></th></tr></thead><tbody>
+<tr><td>1</td><td><em>tríom</em></td><td><em>trínn</em></td></tr>
+<tr><td>2</td><td><em>tríot</em></td><td><em>tríbh</em></td></tr>
+<tr><td>3m</td><td><em>tríd</em></td><td><em>tríotha</em></td></tr>
+<tr><td>3f</td><td><em>tríthe</em></td><td></td></tr>
+</tbody></table>
+</div>
+<h2 id="66-compound-prepositions"><a class="header" href="#66-compound-prepositions">6.6 Compound Prepositions</a></h2>
+<p>Some of the compound prepositions have a special form or pronunciation in the dialect; the written form is given below on the left and the dialectal form in the centre:</p>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th><th></th></tr></thead><tbody>
+<tr><td>ar chuma</td><td><em>ar chuma/cuma</em></td><td><em>lá breá ab ea é, cuma an lae inniubh</em></td></tr>
+<tr><td>ar feadh</td><td><em>ar fea</em></td><td><em>ar fea tamaill</em></td></tr>
+<tr><td></td><td><em>ar feag</em></td><td><em>ar feag tamaill</em></td></tr>
+<tr><td></td><td><em>fean</em></td><td><em>fean na bliana</em></td></tr>
+<tr><td></td><td><em>fan</em></td><td><em>fan an tsamhraig</em></td></tr>
+<tr><td>ar fud</td><td><em>ar fuaid</em></td><td><em>ar fuaid na háite</em></td></tr>
+<tr><td></td><td><em>ar fuid</em></td><td><em>ar fuid na háite</em></td></tr>
+<tr><td>ar nós</td><td><em>ar nós/nús</em></td><td><em>ar nós aon duine eile</em></td></tr>
+<tr><td></td><td><em>nós/nús</em></td><td><em>nós aon duine eile</em></td></tr>
+<tr><td>de cheal</td><td><em>ceal</em> (normally)</td><td><em>bheith ar ocras ceal airgid</em></td></tr>
+<tr><td>de réir</td><td><em>dréir</em></td><td><em>dréir na teilifíse</em></td></tr>
+<tr><td></td><td><em>déir</em></td><td><em>déir na haimsire a bheidh ann</em></td></tr>
+<tr><td>faoi dhéin</td><td><em>fé ghéin</em></td><td><em>a' teacht féna ghéin</em> ('towards him'), <em>a' teacht féna géin</em> ('towards her'), <em>a' teacht fé ár ngéin</em> ('towards us')</td></tr>
+<tr><td>i gceann</td><td><em>i gceann</em></td><td><em>i gceann seachtaine</em></td></tr>
+<tr><td></td><td><em>i gciúnn</em></td><td><em>i ndiaig na gcapall</em></td></tr>
+<tr><td>in éineacht le</td><td><em>in aenacht lé</em></td><td><em>bhíos in aenacht leis</em></td></tr>
+<tr><td></td><td><em>in aecht lé</em></td><td><em>bhíos in aecht leis</em></td></tr>
+<tr><td></td><td><em>in aeint lé</em></td><td><em>bhíos in aeint leis</em></td></tr>
+<tr><td>os cionn</td><td><em>as chiúnn</em></td><td><em>as chiúnn na cuntúrach</em></td></tr>
+<tr><td></td><td><em>os chiúnn</em></td><td><em>os chiúnn na tine</em></td></tr>
+<tr><td>os coinne</td><td><em>as choinne</em></td><td><em>as choinne an tí amach</em></td></tr>
+<tr><td></td><td><em>as</em> c(h)omhair</td><td><em>as comhair an tí amach</em></td></tr>
+<tr><td><em>tar éis</em></td><td><em>tréis</em></td><td><em>tréis an chogaig ab ea é</em></td></tr>
+<tr><td></td><td><em>téis</em></td><td><em>téis an dínnéir</em></td></tr>
+<tr><td></td><td><em>héis</em></td><td><em>héis tamaill</em></td></tr>
+</tbody></table>
+</div>
+<h2 id="67-dropping-prepositions"><a class="header" href="#67-dropping-prepositions">6.7 Dropping prepositions</a></h2>
+<p>The prepositions <em>i</em> and <em>go</em> can be dropped</p>
+<p>(i) Before the noun <em>tig</em> + a personal noun:</p>
+<ul>
+<li><em>thuas ti' Sheáin</em></li>
+<li><em>ó thuaidh ti' Mhuintir Shé</em></li>
+<li><em>a' dol siar tig an Ghearaltaigh</em></li>
+</ul>
+<p>(ii) Before <em>ár/úr</em> + a normal noun (nouns as part of compound prepositions included):</p>
+<ul>
+<li><em>ní raibh sé riamh ár dtigne</em></li>
+<li><em>a' dol siar úr dtigse</em></li>
+<li><em>bhíodh míola ár ngruaig</em></li>
+<li><em>an rabhabhair úr gcodladh go dtí so</em></li>
+<li><em>bhí sé fácaithe ár ndiaig againn</em></li>
+<li><em>cé bhí úr dteannta?</em></li>
+</ul>
+<p>(iii) In certain set phrases:</p>
+<ul>
+<li><em>bhíomair amuh ó dhubh dubh</em></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="possessive_particles.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="numbers.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="possessive_particles.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="numbers.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

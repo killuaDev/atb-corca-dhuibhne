@@ -1,0 +1,498 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Numbers - The Living Language - Corca Dhuibhne</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="translators_note.html">Translator's Note</a></li><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="pronunciation_points.html"><strong aria-hidden="true">1.</strong> Pronunciation Points</a></li><li class="chapter-item expanded "><a href="nouns.html"><strong aria-hidden="true">2.</strong> Nouns</a></li><li class="chapter-item expanded "><a href="adjectives.html"><strong aria-hidden="true">3.</strong> Adjectives</a></li><li class="chapter-item expanded "><a href="pronouns.html"><strong aria-hidden="true">4.</strong> Pronouns</a></li><li class="chapter-item expanded "><a href="possessive_particles.html"><strong aria-hidden="true">5.</strong> Possessive Particles</a></li><li class="chapter-item expanded "><a href="prepositions.html"><strong aria-hidden="true">6.</strong> Prepositions</a></li><li class="chapter-item expanded "><a href="numbers.html" class="active"><strong aria-hidden="true">7.</strong> Numbers</a></li><li class="chapter-item expanded "><a href="verbs.html"><strong aria-hidden="true">8.</strong> Verbs</a></li><li class="chapter-item expanded "><a href="the_copula.html"><strong aria-hidden="true">9.</strong> The Copula</a></li><li class="chapter-item expanded "><a href="vocabulary.html"><strong aria-hidden="true">10.</strong> Vocabulary</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Living Language - Corca Dhuibhne</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="7-numbers"><a class="header" href="#7-numbers">7. Numbers</a></h1>
+<h2 id="71-without-a-noun-after"><a class="header" href="#71-without-a-noun-after">7.1 Without a noun after</a></h2>
+<p>From 1 - 10</p>
+<ul>
+<li><em>1 - haon</em></li>
+<li><em>2 - dó</em></li>
+<li><em>3 - trí</em></li>
+<li><em>4 - ceathair</em></li>
+<li><em>5 - cúig</em></li>
+<li><em>6 - sé</em></li>
+<li><em>7 - seacht</em></li>
+<li><em>8 - hocht</em></li>
+<li><em>9 - naoi</em></li>
+<li><em>10 - deich</em></li>
+</ul>
+<p>From 11 - 19<br />
+<em>déag</em> is added to the numbers above, it's lenited after <em>dó</em>:</p>
+<ul>
+<li><em>11 - haonéag</em></li>
+<li><em>12 - dó dhéag</em></li>
+<li><em>13 - trí déag</em></li>
+<li><em>14 - ceathair déag</em></li>
+<li><em>15 - cúig déag</em></li>
+<li><em>16 - sé déag</em></li>
+<li><em>17 - seacht déag</em></li>
+<li><em>18 - hocht déag</em></li>
+<li><em>19 - naoi déag</em></li>
+</ul>
+<p>From 20 on<br />
+The system of twenties is used, based on the word <em>fiche</em> and its forms <em>fichead, fichid</em>:</p>
+<ul>
+<li><em>20 - fiche</em></li>
+<li><em>21 - haon is fiche</em></li>
+<li><em>22 - dó is fiche</em></li>
+<li><em>23 - trí is fiche</em></li>
+<li><em>30 - deich is fiche</em></li>
+<li><em>40 - daichead</em></li>
+<li><em>60 - trí fichid</em></li>
+<li><em>80 - c(h)eithre fichid</em></li>
+</ul>
+<p>The following terms are used to refer to cards, age, and money:</p>
+<ul>
+<li><em>21 - haon fichead</em></li>
+<li><em>22 - dó fichead</em></li>
+<li><em>23 - trí fichead</em></li>
+<li><em>30 - deich fichead</em></li>
+</ul>
+<p>Numbers from 31 to 99 can be made as follows:</p>
+<ul>
+<li><em>31 - haonéag ar fhichid</em></li>
+<li><em>32 - dó dhéag ar fhichid</em></li>
+<li><em>39 - naoi déag ar fhichid</em></li>
+<li><em>41 - haon is daichead</em></li>
+<li><em>50 - deich is daichead</em></li>
+<li><em>51 - haondéag is daichead</em></li>
+<li><em>52 - dó dhéag is daichead</em></li>
+<li><em>61 - haon is trí fichid</em></li>
+<li><em>70 - deich is trí fichid</em></li>
+<li><em>71 - haonéag is trí fichid</em></li>
+<li><em>81 - haon is cheithre fichid</em></li>
+<li><em>82 - dó is cheithre fichid</em></li>
+<li><em>90 - deich is cheithre fichid</em></li>
+<li><em>91 - haonéag is cheithre fichid</em></li>
+<li><em>99 - naoi déag is cheithre fichid</em></li>
+</ul>
+<h2 id="high-numbers"><a class="header" href="#high-numbers">High Numbers</a></h2>
+<ul>
+<li><em>100 céád/chúig fichid</em></li>
+<li><em>120 sé fichid</em></li>
+<li><em>1,000 míle</em></li>
+</ul>
+<p><em>sé fichid</em> is used for counting money, fish, and eggs.</p>
+<h2 id="the-particle-a"><a class="header" href="#the-particle-a">The particle <em>a</em></a></h2>
+<p><em>a</em> is put before the numbers 1 - 19 (and sometimes 20) in certain contexts, for example when they are</p>
+<p>(i) after a preposition:</p>
+<ul>
+<li><em>ar a dó a chlog</em></li>
+</ul>
+<p>(ii) <em>ag brath ar ainmfhocal</em></p>
+<ul>
+<li><em>uimhir a deich</em></li>
+</ul>
+<p><em>a</em> doesn't need to use in bare counting: <em>haon, dó, trí</em></p>
+<h2 id="72-before-a-noun"><a class="header" href="#72-before-a-noun">7.2 Before a noun</a></h2>
+<p>From 1 - 10</p>
+<ul>
+<li><em>1 - aon...amháin</em> (or a noun on its own)</li>
+<li><em>2 - dhá</em></li>
+<li><em>3 - trí</em></li>
+<li><em>4 - cheithre</em> (<em>ceithre</em> rarely)</li>
+<li><em>5 - chúig/cúig</em></li>
+<li><em>6 - sé</em></li>
+<li><em>7 - seacht</em></li>
+<li><em>8 - hocht</em></li>
+<li><em>9 - naoi</em></li>
+<li><em>10 - deich</em></li>
+</ul>
+<p>1, 2 are followed by the lenited singular form:</p>
+<ul>
+<li><em>aon phunt amháin</em></li>
+<li><em>dhá phunt</em></li>
+</ul>
+<p>When certain feminine nouns follow the number <em>dhá</em>, a special form of them is used which is the same as the dative singular:</p>
+<ul>
+<li><em>lámh - mo dhá láimh</em></li>
+<li><em>cos - do dhá chois</em></li>
+</ul>
+<p>Regarding the form of the noun after 3 - 10, there are two tendencies:</p>
+<p>(i) The noun being in the plural normally without initial mutation (but sometimes lenition especially after 5 or eclipsis after 7-10 by speakers of the older generation); words like <em>capall, ceann, cloch, dosaen, focal, fód, galún, maidean, méar, neoimi(n)t/neoma(n)t, slat, satach, troig, ualach.</em> This counting is shown below with the words <em>fód</em> and <em>ualach</em>, from 1 - 10. (This is not necessarily how everyone would use <em>ualach</em>):</p>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th><th></th></tr></thead><tbody>
+<tr><td><em>1</em></td><td><em>fód</em></td><td><em>ualach</em></td></tr>
+<tr><td><em>2</em></td><td><em>dhá fhód</em></td><td><em>dhá ualach</em></td></tr>
+<tr><td><em>3</em></td><td><em>trí fóid</em></td><td><em>trí ualaí</em></td></tr>
+<tr><td><em>4</em></td><td><em>c(h)eithre fóid</em></td><td><em>c(h)eithre ualaí</em></td></tr>
+<tr><td><em>5</em></td><td><em>c(h)úig fóid</em></td><td><em>c(h)úig ualaí</em></td></tr>
+<tr><td><em>6</em></td><td><em>sé fóid</em></td><td><em>sé ualaí</em></td></tr>
+<tr><td><em>7</em></td><td><em>seacht fóid</em></td><td><em>seacht (n-)ualaí</em></td></tr>
+<tr><td><em>8</em></td><td><em>hocht fóid</em></td><td><em>hocht (n-)ualaí</em></td></tr>
+<tr><td><em>9</em></td><td><em>naoi fóid</em></td><td><em>naoi (n-)ualaí</em></td></tr>
+<tr><td><em>10</em></td><td><em>deich fóid</em></td><td><em>deich (n-)ualaí</em></td></tr>
+</tbody></table>
+</div>
+<p>The following words have special plural forms after numbers: <em>bliain (bliana, glúin</em> 'generation' <em>(glúine), orlach (orla), pingin (pingine), scillin (scilline), seachtain (seachtaine), uair (uaire).</em> The normal plural forms are <em>blianta, glúinte, orlaí, pinginí, scilliní, seachtainí, uaireanta.</em> Regarding <em>ceann</em>, <em>cinn</em> is the only plural form used (<em>ceanna, ceannaibh, ceannaíocha</em> exist as well).</p>
+<p>Some of these words are exceptional with regards to initial mutations. It's a common tendency to eclipse <em>bliana</em> after 3 - 10 (e.g. <em>trí mbliana, deich mbliana</em>); and <em>uaire</em> especially when it means 'times' rather than 'hours' (e.g. <em>dhineas trí n-uaire é</em>).</p>
+<p>(ii) The noun being in the singular form and lenition after 3 - 6; words like <em>céad, clais, lá, mí, míle, oíche, seomra, slí;</em> this counting is shown below with <em>céad</em> and <em>oíche:</em></p>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th><th></th></tr></thead><tbody>
+<tr><td><em>1</em></td><td><em>céad</em></td><td><em>oíche</em></td></tr>
+<tr><td><em>2</em></td><td><em>dhá chéad</em></td><td><em>dhá oíche</em></td></tr>
+<tr><td><em>3</em></td><td><em>trí chéad</em></td><td><em>trí oíche</em></td></tr>
+<tr><td><em>4</em></td><td><em>c(h)eithre chéad</em></td><td><em>c(h)eithre oíche</em></td></tr>
+<tr><td><em>5</em></td><td><em>c(h)úig chéad</em></td><td><em>c(h)úig oíche</em></td></tr>
+<tr><td><em>6</em></td><td><em>sé chéad</em></td><td><em>sé oíche</em></td></tr>
+<tr><td><em>7</em></td><td><em>seacht céad/chéad/gcéad</em></td><td><em>seacht (n-)oíche</em></td></tr>
+<tr><td><em>8</em></td><td><em>hocht céad/chéad/gcéad</em></td><td><em>hocht (n-)oíche</em></td></tr>
+<tr><td><em>9</em></td><td><em>naoi céad/chéad/gcéad</em></td><td><em>naoi (n-)oíche</em></td></tr>
+<tr><td><em>10</em></td><td><em>deich céad/chéad/gcéad</em></td><td><em>deich (n-)oíche</em></td></tr>
+</tbody></table>
+</div>
+<p>Regarding initial mutations, eclipsis after 7 - 10 has died out a lot. Sometimes t's said by speakers of the oldest generation (<em>e.g. naoii gcéad</em>), and it's in certain set phrases (e.g. <em>na seacht gcodlatánaigh, na deich n-aitheanta</em>). When the word <em>céad</em> is used to count land, it's normal to lenite it after all of the numbers (<em>chúig chéad, hocht chéad</em>). The word <em>míle</em> is lenited after 7 - 10 as well (<em>seacht mhíle, naoi mhíle, deich mhíle</em>).</p>
+<p>From 11 - 19<br />
+<em>déag</em> is put after the noun:</p>
+<ul>
+<li><em>trí fóid déag</em></li>
+<li><em>trí mbliana déag</em></li>
+<li><em>trí chéad déag</em></li>
+</ul>
+<p><em>déag</em> is lenited after a singular word ending in a vowel:</p>
+<ul>
+<li><em>dhá mhí dhéag</em></li>
+<li><em>sé lá dhéag</em></li>
+</ul>
+<p>But it's not always lenited after <em>aon</em> + singular word:</p>
+<ul>
+<li><em>aon duine déag</em></li>
+<li><em>ao' dhuine dhéag</em></li>
+</ul>
+<p>From 20 on</p>
+<ul>
+<li><em>21 - ceann is fiche</em></li>
+<li><em>22 - dhá cheann is fiche</em></li>
+<li><em>23 - trí cinn is fiche - trí cinn fhichead</em></li>
+<li><em>30 - deich (g)cinn is fiche - deich (g)cinn fhichead</em></li>
+<li><em>31 - aon cheann déag is fiche - aon cheann déag ar fhichid</em></li>
+<li><em>35 - chúig cinn déag is fiche - chúig cinn déag ar fhichid</em></li>
+</ul>
+<p><em>fichead</em> is lenitedd after singular nouns ending in vowels and after the plural form <em>cinn</em>:</p>
+<ul>
+<li><em>deich dhuine fhichead</em></li>
+<li><em>trí mhíle fhichead</em></li>
+<li><em>sé cinn fhichead</em></li>
+</ul>
+<p><em>fichead</em> isn't lenited after <em>bliana:</em></p>
+<ul>
+<li><em>trí (m)bliana fichead</em></li>
+</ul>
+<h2 id="73-the-article-before-numbers"><a class="header" href="#73-the-article-before-numbers">7.3 The article before numbers</a></h2>
+<p>The singular and plural forms of the article are used as follows:</p>
+<p>Singular before 1, 2</p>
+<ul>
+<li><em>an t-aon cheann amháin</em></li>
+<li><em>an dá cheann son</em></li>
+</ul>
+<p>Plural before numbers from 3 on</p>
+<ul>
+<li><em>na trí cinn sin</em></li>
+<li><em>na fiche ceann acu</em></li>
+<li><em>na míle punt son</em></li>
+</ul>
+<h2 id="74-counting-with-cinn-do"><a class="header" href="#74-counting-with-cinn-do">7.4 Counting with <em>cinn do</em></a></h2>
+<p>It's normal to count nouns and farm wares with number + <em>cinn do</em> + noun instead of number + noun:</p>
+<ul>
+<li><em>trí cinn d'uibhe</em></li>
+<li><em>sé cinn do bha</em></li>
+<li><em>seacht cinn do chaoire</em></li>
+</ul>
+<p>This style can be followed to count lots of other things, other than words referring to people (e.g. <em>fear, múinteoir</em>), money (e.g. <em>punt, pingin</em>), time (e.g. <em>lá, seachtain</em>) and quantities and measures (e.g. <em>piúnt, troig</em>). There's an option between pairs like these:</p>
+<ul>
+<li><em>trí chéachta</em> or <em>trí cinn de chéachtaí</em></li>
+<li><em>cheithre leaba</em> or <em>cheithre cinn de leapacha</em></li>
+</ul>
+<h2 id="75-numbers-being-connected-with-nó"><a class="header" href="#75-numbers-being-connected-with-nó">7.5 Numbers being connected with <em>nó</em></a></h2>
+<p>There's various ways to connect two numbers which are governing the same noun. It's normally a number the number above it. These are the patterns, shown with 2, 3:</p>
+<p>(i) Repeating the noun:</p>
+<ul>
+<li><em>dhá bhuidéal nó trí bhuidéal</em> (or <em>cúpla buidéal...</em>)</li>
+</ul>
+<p>(ii) One of these patterns:</p>
+<ul>
+<li><em>dhá bhuidéal nó trí</em> (or <em>cúpla buidéal nó trí</em>)</li>
+<li><em>dó nó trí do bhuidéil</em></li>
+<li><em>dó nó trí 'bhuidéil</em> (elided <em>do</em>)</li>
+<li><em>dó nó trí buidéil</em></li>
+</ul>
+<h2 id="76-the-personal-numbers"><a class="header" href="#76-the-personal-numbers">7.6 The personal numbers</a></h2>
+<p>This is how people are counted:</p>
+<p>1 - 10</p>
+<ul>
+<li><em>1 - duine</em></li>
+<li><em>2 - beirt</em></li>
+<li><em>3 - triúr</em></li>
+<li><em>4 - ceatharar</em></li>
+<li><em>5 - cúigear</em></li>
+<li><em>6 - seisear</em></li>
+<li><em>7 - seachtar</em></li>
+<li><em>8 - hochtar</em></li>
+<li><em>9 - naonúr</em></li>
+<li><em>10 deichniúr</em></li>
+</ul>
+<p>11 - 19</p>
+<ul>
+<li><em>11 - aon duine déag/ao' dhuine dhéag/aoinne déag</em></li>
+<li><em>12 - dhá dhuine dhéag/dháréag</em></li>
+<li><em>13 - trí dhuine dhéag</em></li>
+<li><em>14 - cheithre dhuine dhéag</em></li>
+<li><em>15 - c(h)úig dhuine dhéag</em></li>
+<li><em>16 - sé dhuine dhéag</em></li>
+<li><em>17 - seacht dhuine dhéag</em></li>
+<li><em>18 - hocht dhuine dhéag</em></li>
+<li><em>19 - naoi dhuine dhéag</em></li>
+</ul>
+<h2 id="77-the-ordinal-numbers"><a class="header" href="#77-the-ordinal-numbers">7.7 The ordinal numbers</a></h2>
+<p>These are the forms, being shown before <em>ceann</em> and <em>oíche</em></p>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th><th></th></tr></thead><tbody>
+<tr><td><em>1</em></td><td><em>an chéad cheann</em></td><td><em>an chéad oíche</em></td></tr>
+<tr><td><em>2</em></td><td><em>an tara/tarna ceann</em></td><td><em>an tara/tarna hoíche</em></td></tr>
+<tr><td><em>3</em></td><td><em>an tríú ceann</em></td><td><em>an tríú oíche</em></td></tr>
+<tr><td><em>4</em></td><td><em>an ceathrú ceann</em></td><td><em>an ceathrú oíche</em></td></tr>
+<tr><td><em>5</em></td><td><em>an cúigiú ceann</em></td><td><em>an cúigiú oíche</em></td></tr>
+<tr><td><em>6</em></td><td><em>an séú ceann</em></td><td><em>an séú oíche</em></td></tr>
+<tr><td><em>7</em></td><td><em>an seachtú ceann</em></td><td><em>an seachtú oíche</em></td></tr>
+<tr><td><em>8</em></td><td><em>an hochtú ceann</em></td><td><em>an hochtú oíche</em></td></tr>
+<tr><td><em>9</em></td><td><em>an naoú ceann</em></td><td><em>an naoú oíche</em></td></tr>
+<tr><td><em>10</em></td><td><em>an deichiú ceann</em></td><td><em>an deichiú oíche</em></td></tr>
+</tbody></table>
+</div>
+<p><em>déag</em> can be added to these to make the ordinal numbers from 11 - 19; <em>an t-aonú...déag</em> is said instead of <em>an chéad...déag</em>:</p>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th><th></th></tr></thead><tbody>
+<tr><td><em>11</em></td><td><em>an t-aonú cean déag</em></td><td><em>an t-aonú oíche déag</em></td></tr>
+<tr><td><em>19</em></td><td><em>an naoú ceann déag</em></td><td><em>an naoú oíche déag</em></td></tr>
+</tbody></table>
+</div>
+<h2 id="78-the-historical-tens"><a class="header" href="#78-the-historical-tens">7.8 The historical tens</a></h2>
+<p>The historical tens are loan words from literary Irish. Some of them have more than one pronunciation:</p>
+<ul>
+<li><em>30 - tríocha</em></li>
+<li><em>50 - caoga</em></li>
+<li><em>60 - seaca</em></li>
+<li><em>70 - seachtmhó/seachtó</em></li>
+<li><em>80 - hochtmhó/hochtó</em></li>
+<li><em>90 - naocha/nócha</em></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="prepositions.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="verbs.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="prepositions.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="verbs.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

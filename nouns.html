@@ -1,0 +1,466 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Nouns - The Living Language - Corca Dhuibhne</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="translators_note.html">Translator's Note</a></li><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="pronunciation_points.html"><strong aria-hidden="true">1.</strong> Pronunciation Points</a></li><li class="chapter-item expanded "><a href="nouns.html" class="active"><strong aria-hidden="true">2.</strong> Nouns</a></li><li class="chapter-item expanded "><a href="adjectives.html"><strong aria-hidden="true">3.</strong> Adjectives</a></li><li class="chapter-item expanded "><a href="pronouns.html"><strong aria-hidden="true">4.</strong> Pronouns</a></li><li class="chapter-item expanded "><a href="possessive_particles.html"><strong aria-hidden="true">5.</strong> Possessive Particles</a></li><li class="chapter-item expanded "><a href="prepositions.html"><strong aria-hidden="true">6.</strong> Prepositions</a></li><li class="chapter-item expanded "><a href="numbers.html"><strong aria-hidden="true">7.</strong> Numbers</a></li><li class="chapter-item expanded "><a href="verbs.html"><strong aria-hidden="true">8.</strong> Verbs</a></li><li class="chapter-item expanded "><a href="the_copula.html"><strong aria-hidden="true">9.</strong> The Copula</a></li><li class="chapter-item expanded "><a href="vocabulary.html"><strong aria-hidden="true">10.</strong> Vocabulary</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Living Language - Corca Dhuibhne</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="2--nouns"><a class="header" href="#2--nouns">2.  Nouns</a></h2>
+<h3 id="21"><a class="header" href="#21">2.1</a></h3>
+<p>A short account is given here of the forms of the noun, and of their usage, under the following headings:</p>
+<ul>
+<li>the genitive singular case</li>
+<li>the dative singular case</li>
+<li>the nominative plural</li>
+<li>the genitive plural case</li>
+<li>the dative plural case</li>
+</ul>
+<p>The nouns of the dialect can be classified into 15 classes based on the formation of the genitive singular.</p>
+<h3 id="22-the-genitive-singular-case"><a class="header" href="#22-the-genitive-singular-case">2.2 The Genitive Singular Case</a></h3>
+<p>(a) Formation<br />
+The genitive singular is made in one of the following ways. Pattern 14 and 15 are followed by verbal nouns:</p>
+<div class="table-wrapper"><table><thead><tr><th>Nominative</th><th>Inflection</th><th>Genitive</th></tr></thead><tbody>
+<tr><td>1 <em>capall</em> f</td><td>slenderisation</td><td><em>crú chapaill</em></td></tr>
+<tr><td>2 <em>cos</em> b</td><td>slenderisation + <em>-e</em></td><td><em>bonn na coise</em></td></tr>
+<tr><td>3 <em>éadach</em> f</td><td><em>-ach</em> to <em>-ig</em></td><td><em>cluth éadaig</em></td></tr>
+<tr><td>4 <em>báisteach</em> b</td><td><em>-ach</em>  to <em>-í</em></td><td><em>cith bháistí</em></td></tr>
+<tr><td>5 <em>áit</em> b</td><td><em>-e</em></td><td><em>timpeall na háite</em></td></tr>
+<tr><td>6 <em>drom</em> f/b</td><td><em>-a</em></td><td><em>tinneas droma</em></td></tr>
+<tr><td>7 <em>abhainn</em> b</td><td>broadening</td><td><em>bruach na habhann</em></td></tr>
+<tr><td>8 <em>móin</em> b</td><td>broadening + <em>-a</em></td><td><em>a' baint mhóna</em></td></tr>
+<tr><td>9 <em>cabhair</em> b</td><td>broadening + <em>-ach</em></td><td><em>a' lorg cabhrach</em></td></tr>
+<tr><td>10 <em>coga</em> f</td><td><em>-a</em> to <em>-aig</em></td><td><em>aimsir an chogaig</em></td></tr>
+<tr><td>'' <em>gíre</em> f</td><td><em>-e</em> to <em>-ig</em></td><td><em>lár an ghírig</em></td></tr>
+<tr><td>11 <em>cleachta</em> b</td><td><em>-a</em> to <em>-an</em></td><td><em>chun cleachtan</em></td></tr>
+<tr><td>12 <em>lámh</em> b</td><td>consonant drop</td><td><em>droim do lá</em></td></tr>
+<tr><td>'' tráig b</td><td>''</td><td><em>trasna na trá</em></td></tr>
+<tr><td>13 <em>gainimh</em> b</td><td><em>-iC</em> to <em>-í</em></td><td>ualach <em>gainí</em></td></tr>
+<tr><td>14 <em>pósa</em> f</td><td><em>-a</em> to <em>-ta</em></td><td><em>in aois a pósta</em></td></tr>
+<tr><td>15 <em>marú</em> f</td><td><em>-ú</em> to <em>-aithe</em></td><td><em>tréis an mharaithe</em></td></tr>
+</tbody></table>
+</div>
+<p>(Note: <em>coga = cogadh, gíre = geimhreadh, cleachta = cuileachta, cuideachta, tráig = trá, gainimh = gaineamh, pósa = pósadh, C = slender mh, gh.</em>)</p>
+<p>Regarding class 9 above, some words ending in broad <em>r</em> are included i.e. <em>casúr</em>, gen. <em>casúrach</em>, <em>srathar,</em> gen. <em>sratharach</em>, and the words <em>cúntúirt</em> 'counter', <em>easair(t),</em> gen. <em>cúntúrach, easarach.</em></p>
+<p>The historical origin of class 10 is that that broad <em>-dh</em> was dropped, but slender <em>-dh</em> was made into a <em>-g;</em> these two steps are shown with the words <em>cogadh:</em></p>
+<ul>
+<li>cogadh - an chogaidh</li>
+<li><em>coga</em> - <em>an chogaig</em></li>
+</ul>
+<p>But now by analogy, some words which never finished with <em>-dh</em> follow this pattern in the dialect, for example:</p>
+<ul>
+<li><em>geata - piléar an gheataig</em></li>
+<li><em>barra - an ceann barraig</em></li>
+<li><em>pluda - bróga pludaig</em></li>
+<li><em>sneachta - cith shneachtaig</em></li>
+</ul>
+<p>The following words have irregular forms in the genitive:</p>
+<ul>
+<li><em>bean - mná</em></li>
+<li><em>caora - caeireach</em></li>
+<li><em>codladh - colata</em></li>
+<li><em>drifúr - driféar</em></li>
+<li><em>lá - lae</em></li>
+<li><em>leabaig - leapan/leapa</em></li>
+<li><em>mí - míosa</em> (or <em>mí</em>)</li>
+<li><em>sliabh - slé</em></li>
+<li><em>sluasad - sluaiste</em></li>
+<li><em>talamh - talún</em></li>
+<li><em>tig - tí</em></li>
+</ul>
+<p>There's lots of words which don't get declined; among these are ones ending in</p>
+<p>(i) a vowel, e.g. <em>falla, uisce,</em><br />
+(ii) a consonant, in a few words, e.g. <em>uncail,</em><br />
+(iii) <em>-ín,</em> e.g. <em>cailín, beainín,</em>
+(iv) <em>-acht,</em> normally, e.g. <em>carthanacht, filíocht</em></p>
+<p>(b) Usage<br />
+The most interesting thing about the use of the genitive singular case in spoken Irish is how often it's avoided when you'd expect it. It's not typical to put a noun in the genitive in the following cases:</p>
+<p>(i) If it's being qualified by an adjective or by another noun in the genitive:</p>
+<ul>
+<li><em>le linn an choga d(h)éanach</em></li>
+<li><em>a 'baint móin dhubh</em></li>
+<li><em>cliathán an mhótar m(h)uar son</em></li>
+<li><em>a' déanamh obair mhaith</em></li>
+<li><em>a' tógaint tig muar groí</em></li>
+<li><em>fear céile an bhean son eile</em></li>
+<li><em>a' lorg lá breise</em></li>
+</ul>
+<p>(ii) If it's being qualified by a relative clause:</p>
+<ul>
+<li><em>tréis an bhuíon a bhí ann</em></li>
+<li><em>cártaí an fhear atá in aice leat</em></li>
+</ul>
+<p>(iii) After <em>saghas, sórt:</em></p>
+<ul>
+<li><em>tá saghas ocras orm</em></li>
+<li><em>bhí sórt deabhadh orm</em></li>
+</ul>
+<p>The genitive case is applied</p>
+<p>(i) if the word isn't qualified, especially if it's at the end of a phrase, or if there's a small break after it:</p>
+<ul>
+<li><em>aimsir an chogaig</em></li>
+<li><em>a' baint mhóna</em></li>
+<li><em>cliathán an mhótair</em></li>
+<li><em>a' lorg oibre</em></li>
+<li><em>a' tógaint tí</em></li>
+<li><em>uncail a mhná</em></li>
+</ul>
+<p>(ii) in set phrases. These are phrases that people know by heart and would say any other way:</p>
+<ul>
+<li><em>éirí na gréine</em></li>
+<li><em>fear iníne mo dhriothár</em></li>
+<li><em>lár an lae</em></li>
+<li><em>cuaille téide</em></li>
+<li><em>bean an tí</em>
+The nominative in the turn of phrase <em>a' baint lá dhó</em> is an exception.</li>
+</ul>
+<h3 id="23-the-dative-singular"><a class="header" href="#23-the-dative-singular">2.3 The Dative Singular</a></h3>
+<p>(a) Formation<br />
+Certain feminine nouns have dative singular forms. There are the classes for that, along with inflection examples:</p>
+<div class="table-wrapper"><table><thead><tr><th>Nominative</th><th>Inflection</th><th>Dative</th></tr></thead><tbody>
+<tr><td><em>4. báisteach</em></td><td><em>-ach</em> to <em>-ig</em></td><td><em>amuigh fén mbáistig</em></td></tr>
+<tr><td><em>7. cos</em></td><td>slenderisation</td><td><em>ar mo chois</em></td></tr>
+<tr><td><em>11. cleachta</em></td><td><em>-in</em></td><td><em>bheith sa chleachtain</em></td></tr>
+<tr><td>12. <em>láimh</em></td><td>slenderisation</td><td><em>im láimh</em></td></tr>
+</tbody></table>
+</div>
+<p>If the word ends in <em>-ch</em>, the dative form is pronounced as follows:</p>
+<ul>
+<li><em>cloch - cloi(h)</em></li>
+<li><em>croch - croi(h)</em></li>
+<li><em>cruach - crúe(h)</em></li>
+<li><em>luch - lui(h)</em></li>
+</ul>
+<p>(b) Usage<br />
+Probably the most used words in the dative singular are <em>bróg, cloch, cos, cruach, gaoth, grian, lámh</em> and the words ending in <em>-óg.</em></p>
+<ul>
+<li><em>bróg - tá rud éigin im bróig</em></li>
+<li><em>cloch  ag iascach ón gcloich, taoide go cloich</em></li>
+<li><em>cos - thit sé sa chois orm</em></li>
+<li><em>gaoth - é a scaoileadh le gaoith</em></li>
+<li><em>grian - amuigh fén ngréin</em></li>
+<li><em>lámh - ag obair as láimh a chéile</em></li>
+<li><em>naomhóg - istigh sa naomhóig</em></li>
+</ul>
+<p>Often the dative singular is used instead of the nominative singular, especially in the case of the words <em>cos, lámh</em> and those ending in <em>-óg:</em></p>
+<ul>
+<li><em>ná gearraig do láimh</em></li>
+<li><em>ghoirtíos mo chois</em></li>
+<li><em>cuir ort do chasóig</em></li>
+</ul>
+<p>It may not be worth trying to distinguish the nominative and the dative in the case of these words.</p>
+<h3 id="24-the-nominative-plural"><a class="header" href="#24-the-nominative-plural">2.4 The Nominative Plural</a></h3>
+<p>Slenderisation on its own is receding as a sign of the plural (i.e. the like of <em>an costas, na costais</em>), and there's been a broadening of the usage of the suffixes <em>-ta, -te, -taí, -tí, -acha, anna, -í, -ithe, íocha.</em> Along with that <em>-ithe</em> and <em>-íocha</em> are taking the place of <em>-í</em> as the plural for many words.</p>
+<p>(i) <em>-í</em> or <em>-tí</em> are added to multisyllabic words ending in <em>-s:</em></p>
+<ul>
+<li><em>bronntanas - bronntanaisí</em></li>
+<li><em>costas - costaisí</em></li>
+<li><em>cuntas - cuntaisí</em></li>
+<li><em>fearas - fearaistí</em></li>
+<li><em>treabhchas - treabhchaistí</em></li>
+<li><em>compás - compáistí</em></li>
+<li><em>déantús - déantúistí</em></li>
+</ul>
+<p>(ii) <em>-í</em> or <em>-ithe</em> are added to words ending with <em>-úir, -óir, -éir, and -ire.</em></p>
+<ul>
+<li><em>dochtúir - dochtúirí</em> or <em>dochtúirithe</em></li>
+<li><em>múinteoir - múinteoirí</em> or <em>múinteoirithe</em></li>
+<li><em>tuinncéir - tuinncéirí</em> or <em>tuinncéirithe</em></li>
+<li><em>iascaire - iascairí</em> or <em>iascairithe</em></li>
+</ul>
+<p>(iii) <em>-í</em> or <em>-ithe</em> are added to many multisyllabic words ending in <em>-e, -a:</em></p>
+<ul>
+<li><em>béile - béilí</em> or <em>béilíocha</em></li>
+<li><em>blúire - blúirí</em> or <em>blúiríocha</em></li>
+<li>*gála - <em>gálaí</em> or <em>gálaíocha</em></li>
+</ul>
+<p>Sometimes it's an option between <em>-í</em> and <em>-ithe</em>.</p>
+<ul>
+<li><em>siopa - siopaí</em> or <em>siopaithe</em></li>
+</ul>
+<p>(iv) <em>-íocha</em> can be added to single syllable words ending in <em>-nn, -ll, -rr</em> instead of slenderisation:</p>
+<ul>
+<li><em>bonn - boinn</em> or <em>bonnaíocha</em></li>
+<li><em>crann - crainn</em> or <em>crannaíocha</em></li>
+<li><em>poll - poill</em> or <em>pollaíocha</em></li>
+</ul>
+<p><em>-íocha</em> is added to other single syllable words too:</p>
+<ul>
+<li><em>braon - braonaíocha</em></li>
+</ul>
+<p>These are the plural forms of certain common words:</p>
+<ul>
+<li><em>baile - bailte, bailtí, bailtíocha</em></li>
+<li><em>claí -claitheacha</em></li>
+<li><em>fear - fearaibh</em></li>
+<li><em>piont - pint</em> (said as <em>piúnt, pínt</em>)</li>
+<li><em>portach - portaithe</em></li>
+<li><em>rás - ráiseanna</em></li>
+<li><em>tonn - tonntacha, tonnaíocha</em></li>
+<li><em>ubh - uibhe</em> (said as <em>an t-obh, na huí</em>)</li>
+</ul>
+<h3 id="25-the-genitive-plural-case"><a class="header" href="#25-the-genitive-plural-case">2.5 The Genitive Plural Case</a></h3>
+<p>(a) Formation<br />
+There is a genitive plural of the words in classes 1, 2, 3, 4, 7, 9, 11, 12, or there can be. It is the same form as the nominative singular. There's only a few words which have a different genitive plural to the nominative singular:</p>
+<div class="table-wrapper"><table><thead><tr><th>Word</th><th>Inflection</th><th>Example</th></tr></thead><tbody>
+<tr><td><em>bean</em></td><td>irregular</td><td><em>foireann na mban</em></td></tr>
+<tr><td><em>clais</em></td><td>broadening</td><td><em>a' treabhadh na gclas</em></td></tr>
+<tr><td><em>gamhain</em></td><td><em>broadening</em></td><td><em>a' díol na ngamhan</em></td></tr>
+<tr><td><em>gé</em></td><td><em>-nn</em></td><td><em>scata géann</em></td></tr>
+<tr><td><em>súil</em></td><td>broadening</td><td><em>radharc na súl</em></td></tr>
+</tbody></table>
+</div>
+<p>(b) Usage<br />
+The genitive singular is used in many set phrases, for example:</p>
+<ul>
+<li><em>comórtas amhrán</em></li>
+<li><em>cruite capall</em></li>
+<li><em>cliabhán éan</em></li>
+<li><em>claí fód</em></li>
+<li><em>criathar poll</em></li>
+<li><em>deilliúr na gcrann</em></li>
+<li><em>feidhre bróg</em></li>
+<li><em>tor sceach</em></li>
+<li><em>ti' na gcearc</em></li>
+<li><em>cruiceog mheach</em></li>
+</ul>
+<p>But, outside of phrases of this sort, it's common, or normal, to use the nominative plural when you would expect the genitive plural:</p>
+<ul>
+<li><em>a' rá na n-amhráin</em></li>
+<li><em>a' tindeáil na gcapaill</em></li>
+<li><em>a' cur na gcrainn</em></li>
+<li><em>a' déanamh na bpoill</em></li>
+<li><em>a' leathadh na scioltáin</em></li>
+<li><em>gairdín na manaigh</em></li>
+</ul>
+<h3 id="26-the-dative-plural-case"><a class="header" href="#26-the-dative-plural-case">2.6 The Dative Plural Case</a></h3>
+<p>The dative plural is formed using <em>-ibh</em>. It's not used except in proverbs and in certain set phrases, and it can't be said that it's a living part of the dialect's grammar. Here are some examples:</p>
+<ul>
+<li><em>bó - bíonn adharca fada ar na buaibh thar lear</em></li>
+<li><em>bonn - é a chur ar a bhonnaibh</em></li>
+<li><em>súil - briseann an dúchas trí shúilibh an chait</em></li>
+</ul>
+<p>In the case of certain words, the nominative plural is shown with <em>-ibh</em>:</p>
+<ul>
+<li><em>na fearaibh</em></li>
+<li><em>na ceannaibh sin</em></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="pronunciation_points.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="adjectives.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="pronunciation_points.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="adjectives.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

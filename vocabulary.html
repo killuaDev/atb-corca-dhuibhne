@@ -1,0 +1,2923 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Vocabulary - The Living Language - Corca Dhuibhne</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="translators_note.html">Translator's Note</a></li><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="pronunciation_points.html"><strong aria-hidden="true">1.</strong> Pronunciation Points</a></li><li class="chapter-item expanded "><a href="nouns.html"><strong aria-hidden="true">2.</strong> Nouns</a></li><li class="chapter-item expanded "><a href="adjectives.html"><strong aria-hidden="true">3.</strong> Adjectives</a></li><li class="chapter-item expanded "><a href="pronouns.html"><strong aria-hidden="true">4.</strong> Pronouns</a></li><li class="chapter-item expanded "><a href="possessive_particles.html"><strong aria-hidden="true">5.</strong> Possessive Particles</a></li><li class="chapter-item expanded "><a href="prepositions.html"><strong aria-hidden="true">6.</strong> Prepositions</a></li><li class="chapter-item expanded "><a href="numbers.html"><strong aria-hidden="true">7.</strong> Numbers</a></li><li class="chapter-item expanded "><a href="verbs.html"><strong aria-hidden="true">8.</strong> Verbs</a></li><li class="chapter-item expanded "><a href="the_copula.html"><strong aria-hidden="true">9.</strong> The Copula</a></li><li class="chapter-item expanded "><a href="vocabulary.html" class="active"><strong aria-hidden="true">10.</strong> Vocabulary</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Living Language - Corca Dhuibhne</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="10-vocabulary"><a class="header" href="#10-vocabulary">10. Vocabulary</a></h1>
+<p>Below are words which have a special meaning, pronunciation, or form in the dialect.</p>
+<ul>
+<li>ábalta (ar)
+<ul>
+<li>'Able to', e.g. <em>Ní rabhas ábalta air é a dhéanamh</em></li>
+</ul>
+</li>
+<li>ábhar 1
+<ul>
+<li>Said <em>ávar</em>; this is how it's used:</li>
+<li>
+<ol>
+<li>In the meaning 'fairly', e.g. <em>ábhar daor, ábhairín déanach.</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>In the meaning 'a few', e.g. <em>ábhar caeireach.</em></li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>In the phrase <em>ag imeacht air m'ábhar féin.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>ábhar 2
+<ul>
+<li>said /our/; This is a noun, e.g. <em>abhar sagairt</em></li>
+</ul>
+</li>
+<li>abláil
+<ul>
+<li>'Botching', e.g. <em>Níl sé ach ag abaláil leis.</em></li>
+</ul>
+</li>
+<li>achasán
+<ul>
+<li><em>asachán</em> is what's said; 'reporach, insult'</li>
+</ul>
+</li>
+<li>achrann
+<ul>
+<li>Has different meanings:</li>
+<li>
+<ol>
+<li>'Dispute' e.g. <em>Ní haon mhaitheas bheith a' déanamh achrainn mar gheall air</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Entanglement', e.g. <em>Chua sé in achrann im chuid gruaige.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>achrannach
+<ul>
+<li>Said <em>achrannach</em> or  <em>acharnach</em></li>
+</ul>
+</li>
+<li>aer
+<ul>
+<li>The genitive singular <em>aeir</em> is said as <em>ír</em> or <em>éir.</em></li>
+</ul>
+</li>
+<li>aghaidh fidil
+<ul>
+<li>'Mask'; Said <em>agha fidil</em> or <em>hagha fidil</em></li>
+</ul>
+</li>
+<li>aicíd
+<ul>
+<li>'Disease, infirmity' See <em>galar</em> below.</li>
+</ul>
+</li>
+<li>aicsean
+<ul>
+<li>'Action, achievement', e.g. <em>Dhineadar an-aicsean; Ní dhéanha sé an t-aicsean in aon chor.</em></li>
+</ul>
+</li>
+<li>Aibreán
+<ul>
+<li>Said <em>Abrán</em></li>
+</ul>
+</li>
+<li>ailp
+<ul>
+<li>'Lump' e.g. <em>ailp aráin; Bhí ailp éigin air snámh amu.</em></li>
+</ul>
+</li>
+<li>áil
+<ul>
+<li>In the question <em>Cad ab áil leat do?</em> (= what do you want it for?).</li>
+</ul>
+</li>
+<li>áilteoir
+<ul>
+<li>'Trickster, practical joker'.</li>
+</ul>
+</li>
+<li>ainm
+<ul>
+<li>This word is feminine in the dialect. <em>an ainm</em> and <em>ag rá na hainme;</em> are said; plural <em>na hainmneacha.</em></li>
+</ul>
+</li>
+<li>ainnis
+<ul>
+<li>'Miserable', 'wretched'; referring to the weather, to people.</li>
+</ul>
+</li>
+<li>ainniseoir
+<ul>
+<li>A person you would pity.</li>
+</ul>
+</li>
+<li>aird
+<ul>
+<li>'Attention, notice'; said <em>áird</em>, e.g. <em>Ní thugadar aon áird orm</em> (they didn't listen to me, they didn't follow my advice); <em>Ná tabhair aon áird air</em> (don't let him annoy you).</li>
+</ul>
+</li>
+<li>aireach
+<ul>
+<li>said <em>ireach</em>, with the stress on the second syllable. It has two meanings:</li>
+<li>
+<ol>
+<li>'Careful', e.g. <em>Ní mhór do dhuine bheith aireach.</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Attentive', e.g. <em>éisteacht go haireach.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>áisiúil
+<ul>
+<li>'Useful, convenient'.</li>
+</ul>
+</li>
+<li>aistriú
+<ul>
+<li>'Moving, removing', e.g. <em>Chaitheadar aistriú dtí tig eile; Chuamair dtí aistriú an choirp</em> 'we attended the removal of the remains'.</li>
+</ul>
+</li>
+<li>áiteamh
+<ul>
+<li>'Disputation', e.g. <em>Bhíodar ag áiteamh air a chéile mar gheall air; Bíonn siad i gcónaí ag áiteamh.</em></li>
+</ul>
+</li>
+<li>aithreachas
+<ul>
+<li>'Regret'. <em>cathú</em> isn't in the dialect.</li>
+</ul>
+</li>
+<li>allaíre
+<ul>
+<li>'Partial deafness'</li>
+</ul>
+</li>
+<li>alpadh
+<ul>
+<li>'Gulping (food)', e.g. <em>Ná bí ag alpa do chuid bíg.</em></li>
+</ul>
+</li>
+<li>amadán
+<ul>
+<li>said <em>madán</em> (but <em>an t-umadán</em> with the article in the nominative). It can be lenited, e.g. <em>a mhadáin.</em></li>
+</ul>
+</li>
+<li>amárach
+<ul>
+<li>Said <em>amáireach.</em></li>
+</ul>
+</li>
+<li>amharc
+<ul>
+<li>Said <em>avarc</em></li>
+</ul>
+</li>
+<li>amhlaidh
+<ul>
+<li>In sentences like <em>Is amhlaidh a dhineas dearúd air</em> the following forms can be used: <em>Is amhlaig a, Is amhla', Is an a, Is un a, Is ea, Is ean a.</em></li>
+</ul>
+</li>
+<li>amhrán
+<ul>
+<li>Said /oura:n/ or <em>úrán.</em></li>
+</ul>
+</li>
+<li>amhras
+<ul>
+<li>Has two meanings:</li>
+<li>
+<ol>
+<li>'Suspicion', e.g. <em>Bheith in amhras air dhuine.</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Undue self-esteem', e.g. <em>Tá an-amhras aige air héin.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>anáil
+<ul>
+<li>Said <em>ineál;</em> e.g. <em>a' tarrac a neála/a hineála</em></li>
+</ul>
+</li>
+<li>annamh
+<ul>
+<li>Said <em>anna'</em> in the phrase <em>b'anna' lé,</em> for example <em>B'anna' leis leis a bheith anso</em> (that is 'it's rare that he's here')</li>
+</ul>
+</li>
+<li>anois
+<ul>
+<li>Said <em>inis</em> or <em>nis.</em></li>
+</ul>
+</li>
+<li>anraith
+<ul>
+<li>Said <em>anairthe.</em></li>
+</ul>
+</li>
+<li>anseo
+<ul>
+<li>Said <em>anso</em> or <em>atso</em></li>
+</ul>
+</li>
+<li>ansin
+<ul>
+<li>Said <em>ansun</em> or <em>atsun</em></li>
+</ul>
+</li>
+<li>ansiúd
+<ul>
+<li>Said <em>ansúd</em> or <em>atsúd</em></li>
+</ul>
+</li>
+<li>aosóga
+<ul>
+<li>'Youngsters' e.g. <em>Is ann a bhíonn na haosóga bailithe.</em></li>
+</ul>
+</li>
+<li>áraistí
+<ul>
+<li>Plural for <em>áras</em>, in the sense 'tableware', e.g. <em>a' ní na n-áraistí.</em></li>
+</ul>
+</li>
+<li>arm
+<ul>
+<li>Has two meanings, 'weapon' and 'tool, implement'; it can be used to refer to a shovel or spade.</li>
+</ul>
+</li>
+<li>árthach
+<ul>
+<li>'Ship'; but 'place' in the phrase <em>árthach spéarach;</em> <em>árthach an chósta</em> is a notable example, 'costguard, fishery protection vessel'.</li>
+</ul>
+</li>
+<li>arú
+<ul>
+<li>Said <em>aravú</em>, e.g. <em>aravú aréir, aravú amáireach, aravú anuirig.</em></li>
+</ul>
+</li>
+<li>ascaill
+<ul>
+<li>Said <em>oscail.</em></li>
+</ul>
+</li>
+<li>baldráilte
+<ul>
+<li>'Pestered', said <em>badarálta</em> e.g. <em>Táim badarálta aigesna leanaí.</em> <em>cráite</em> is a stronger word (e.g. <em>Bheith cráite aigead chóinsias</em>).</li>
+</ul>
+</li>
+<li>baile
+<ul>
+<li><em>aige baile</em> is said, not <em>sa bhaile</em></li>
+</ul>
+</li>
+<li>bailithe de
+<ul>
+<li>'Tired of, bored with', e.g. <em>Táim bailithe dhon leabhar so.</em></li>
+</ul>
+</li>
+<li>bain
+<ul>
+<li>There's an artefact of the relative form in <em>a bhainis le</em> e.g. <em>aon rud a bhainis leo.</em></li>
+</ul>
+</li>
+<li>balcaisí
+<ul>
+<li>Clothes</li>
+</ul>
+</li>
+<li>banaltra
+<ul>
+<li>Said <em>banarthla</em></li>
+</ul>
+</li>
+<li>bascaed
+<ul>
+<li>The normal word for 'basket'.</li>
+</ul>
+</li>
+<li>beach
+<ul>
+<li>Said <em>meach</em>; <em>meach capaill</em> 'wasp', <em>nead mheach</em> 'bees' nest/hive'</li>
+</ul>
+</li>
+<li>bealach
+<ul>
+<li>Only in the place name <em>Blach an 'Leáin'</em></li>
+</ul>
+</li>
+<li>beart
+<ul>
+<li>There's a phrase <em>an bheart a dhéanamh</em> 'to succeed, to suffice', e.g. <em>Dhinis an bheart; Ní dhéanha sé an bheart in aon chor</em> 'it won't do at all'.</li>
+</ul>
+</li>
+<li>beiriú
+<ul>
+<li>'To boil, boiling'; <em>uisce a bheiriú</em> is said, but <em>uisce fliuchaig</em> 'boiling water'; <em>imithe fé bheiriú</em> 'over-boiled, evaporated'.</li>
+</ul>
+</li>
+<li>b'fhéidir
+<ul>
+<li>At the start of a sentence, e.g. <em>B'fhéidir go mbeadh</em>, the following forms can be used <em>Béidir/Méidir/Bé/Mé go mbeadh.</em></li>
+</ul>
+</li>
+<li>bildeáil
+<ul>
+<li>'Building, building-site'; e.g. <em>ag obair air na bildeálacha i Sasana.</em></li>
+</ul>
+</li>
+<li>bileog
+<ul>
+<li>'Leaf', <em>bleog</em> is what's said most, e.g. <em>Tá na bleoga a' titeam don gcrann son.</em></li>
+</ul>
+</li>
+<li>blaincéad
+<ul>
+<li>Said <em>plaincéad</em>.</li>
+</ul>
+</li>
+<li>bleaist
+<ul>
+<li>'Blight' on potatoes, e.g. <em>Ní mhuar duit bheith a' faire na bleaiste.</em></li>
+</ul>
+</li>
+<li>bléid
+<ul>
+<li>The normal word for 'blade', e.g. <em>bléid na speile.</em></li>
+</ul>
+</li>
+<li>blúire
+<ul>
+<li>The most common word for 'a bit/piece of something', e.g. <em>blúire ime; blúire pháipéar</em> (= de pháipéar).</li>
+</ul>
+</li>
+<li>bog
+<ul>
+<li>Has these meanings:</li>
+<li>
+<ol>
+<li>'Soft'</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Humid, close', e.g. <em>Tá an aimsir ana-bhog; Tá sé ana-bhog istig anso.</em></li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>'Free', e.g. <em>pórtar bog.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>boghaisín
+<ul>
+<li>'Rainbow'</li>
+</ul>
+</li>
+<li>boighléir
+<ul>
+<li>'Boiler'</li>
+</ul>
+</li>
+<li>bóisceáil
+<ul>
+<li>'Boasting'</li>
+</ul>
+</li>
+<li>boladh
+<ul>
+<li>Said <em>bla</em>; e.g. <em>Tá bla bhuaig</em>; <em>a blahaíl</em> 'sniffing'.</li>
+</ul>
+</li>
+<li>bollóg
+<ul>
+<li>Said <em>blóg</em>; e.g. <em>blóg ráin</em> 'a loaf of bread'.</li>
+</ul>
+</li>
+<li>borradh
+<ul>
+<li><em>Tá borradh ar an bhfarraige</em> (it's agitated)</li>
+</ul>
+</li>
+<li>bos
+<ul>
+<li>Said <em>bas</em>, e.g. <em>bualadh bas</em>.</li>
+</ul>
+</li>
+<li>bradán
+<ul>
+<li>Said <em>burdán</em></li>
+</ul>
+</li>
+<li>braillín
+<ul>
+<li>Said <em>Barrailín</em></li>
+</ul>
+</li>
+<li>brainse
+<ul>
+<li>Has these two meanings:</li>
+<li>
+<ol>
+<li>'Branch of (small) plant', e.g. <em>brainse sceithe.</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Tricks, schemes', e.g. <em>Tá sé lán do bhrainsí; Tá mórán brainsí aige siúd.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>bróg
+<ul>
+<li>'Leather boot'; see <em>slipéar</em>.</li>
+</ul>
+</li>
+<li>brothall
+<ul>
+<li>'Great heat', e.g. <em>Tá brothall dearg ann inniubh</em></li>
+</ul>
+</li>
+<li>bruíon
+<ul>
+<li>'Fight' in the physical sense; see <em>troid</em>.</li>
+</ul>
+</li>
+<li>bruis
+<ul>
+<li>'Brush' like you'd buy in a shop; see <em>scuab</em>.</li>
+</ul>
+</li>
+<li>buachaill
+<ul>
+<li>'A young man'.</li>
+</ul>
+</li>
+<li>buataisí
+<ul>
+<li>'Wellingtons, rubber boots'</li>
+</ul>
+</li>
+<li>buí
+<ul>
+<li>'Yellow, orange, tan (of shoes)'.</li>
+</ul>
+</li>
+<li>buicéad
+<ul>
+<li>Said <em>bocaid</em></li>
+</ul>
+</li>
+<li>buíoch
+<ul>
+<li>Said <em>baoch</em>, has a couple of meanings:</li>
+<li>
+<ol>
+<li>'Grateful', e.g. <em>bheith baoch do dhuine.</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Satisfied', e.g. <em>Táim ana-bhaoch don gcasóg so.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>bunóc
+<ul>
+<li>The old word for 'baby', but often <em>an bhéibí, na béibíos</em> is said.</li>
+</ul>
+</li>
+<li>bunoscionn
+<ul>
+<li>Said <em>buinisciún</em>, 'wrong'; e.g. <em>Níl éinní buinisciún leis; Neadar cad tá buinisciún le Seán.</em></li>
+</ul>
+</li>
+<li>bús
+<ul>
+<li>'Noise, clamour' e..g. <em>Bhí ana-bhús aigean meaisín; Bhí bús cainte aici.</em> <em>bús dataig</em> 'smoke cloud' is said, and <em>bús siúil</em> 'fast walk' as well.</li>
+</ul>
+</li>
+<li>cabhrú
+<ul>
+<li><em>cabhradh</em> and <em>cabhrú</em> exist.</li>
+</ul>
+</li>
+<li>caid
+<ul>
+<li>'Football': both the game and the ball.</li>
+</ul>
+</li>
+<li>cailín
+<ul>
+<li>A young unmarried girl.</li>
+</ul>
+</li>
+<li>caimsiú/caimseach
+<ul>
+<li>Alternative form of <em>aimsiú</em> 'to hit a target'. The two forms are in the dialect; verb <em>caimsíonn</em> or <em>aimsíonn.</em></li>
+</ul>
+</li>
+<li>caincín
+<ul>
+<li>Said <em>cuíncín;</em> meaning the nose of an animal, but often it's said about a person's nose.</li>
+</ul>
+</li>
+<li>cairt
+<ul>
+<li>Common word for a car.</li>
+</ul>
+</li>
+<li>Cam Céachta
+<ul>
+<li><em>An Cam Céachta</em> 'The Plough', constellation.</li>
+</ul>
+</li>
+<li>campa
+<ul>
+<li>'Tent'.</li>
+</ul>
+</li>
+<li>canta
+<ul>
+<li>Said /kounta/; 'chunk' e.g. <em>cannta aráin.</em></li>
+</ul>
+</li>
+<li>cantáil
+<ul>
+<li><em>Rud a channtáil duit féin</em> 'to get exclusive control or use of something'; <em>canntáil ar dhuine</em> 'to outsmart/undercut someone'</li>
+</ul>
+</li>
+<li>cantan
+<ul>
+<li>Birdsong; but <em>amhrán a rá</em> is said.</li>
+</ul>
+</li>
+<li><em>carbhat</em>
+<ul>
+<li>
+<ol>
+<li>'Neckscarf'; said <em>cara-vat</em> with /a/ in the final syllable.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Palate'</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>casadh
+<ul>
+<li>
+<ol>
+<li>'Bend of road', e.g. <em>Casadh na Gráige</em>; plural <em>castaíocha.</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Turn of tune'.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>casóg
+<ul>
+<li>'Coat', big or small; <em>casóg choirp</em> 'short coat, sports jacket'.</li>
+</ul>
+</li>
+<li>ceaig
+<ul>
+<li>'Keg', e.g. <em>ceaig phórtair.</em></li>
+</ul>
+</li>
+<li>ceaisil
+<ul>
+<li>'Castletop' which kids would have.</li>
+</ul>
+</li>
+<li>ceann
+<ul>
+<li>Special usage in the phrase <em>ná tóg aon cheann do</em> (= Don't let him annoy you)</li>
+</ul>
+</li>
+<li>ceannaithe
+<ul>
+<li>Said <em>cneacha</em> or <em>cneatha</em>, 'facial features'.</li>
+</ul>
+</li>
+<li>ceant
+<ul>
+<li>Said <em>ceaint</em>, 'auction'.</li>
+</ul>
+</li>
+<li>ceirtlín
+<ul>
+<li>Said <em>cerithlín</em>.</li>
+</ul>
+</li>
+<li>ceobhrán
+<ul>
+<li>Said <em>ceobharán</em>.</li>
+</ul>
+</li>
+<li>cinniúint
+<ul>
+<li>This can be used in the sense 'accident'</li>
+</ul>
+</li>
+<li>cinnte
+<ul>
+<li>An uncommon word in the dialect; <em>siúrálta</em> or <em>deimhnitheach</em> are said.</li>
+</ul>
+</li>
+<li>cíoch
+<ul>
+<li>Said <em>cín</em> , (from <em>cíchín</em>); plural <em>na cíní(os)</em> is said.</li>
+</ul>
+</li>
+<li>ciotrúnta
+<ul>
+<li>Said <em>ciotarúnta</em>; 'clumsy, contrary', e.g. <em>duine ciotarúnta.</em></li>
+</ul>
+</li>
+<li>císte
+<ul>
+<li>'Loaf, cake', e.g. <em>císte arán donn, císte rísíní, císte milis.</em></li>
+</ul>
+</li>
+<li>ciumhais.
+<ul>
+<li>Said <em>ciosa</em>.</li>
+</ul>
+</li>
+<li>clabhsúr
+<ul>
+<li>'Conclusion, closure', e.g. <em>Clabhsúr a chur air rud</em> 'to finish something'.</li>
+</ul>
+</li>
+<li>clann
+<ul>
+<li>'Children (of particular parents)'; <em>mo chlann</em> 'my children'.</li>
+</ul>
+</li>
+<li>cleas
+<ul>
+<li>'Gang, associates of somebody'; <em>Bhíos in aonacht leis an gcleas eile; Cail an cleas imithe?.</em></li>
+</ul>
+</li>
+<li>cliathán
+<ul>
+<li>Said <em>clíothán;</em> 'side', referring to a person or to an animal, to a hill, etc., e.g. <em>Tá pian im chlíothán agam; Ghoirtig an bhó a clíothán; air chlíothán an chnoic.</em></li>
+</ul>
+</li>
+<li>clipthe
+<ul>
+<li>Said <em>clipithe</em>, 'pestered', e.g. <em>Táim clipithe acu.</em></li>
+</ul>
+</li>
+<li>cluiche
+<ul>
+<li>Said <em>clotha</em> or <em>clutha</em>.</li>
+</ul>
+</li>
+<li>cluthar
+<ul>
+<li>Said <em>cluthair</em>; 'warm, cosy', referring to clothes, a bed, a room etc. <em>te</em> isn't said about a piece of clothing except after warming it.</li>
+</ul>
+</li>
+<li>cnoc
+<ul>
+<li>'Upland, mountain, hill'; e.g. <em>Chaitheas an lá air an gcnoc.</em></li>
+</ul>
+</li>
+<li>cocstí
+<ul>
+<li><em>cocstí a dhéanamh de rud</em> 'to make a mess of something, to ruin something'</li>
+</ul>
+</li>
+<li>coimhthíoch
+<ul>
+<li>Said <em>coítheach</em>; 'distant, reserved' (about a person).</li>
+</ul>
+</li>
+<li>coinníonn
+<ul>
+<li><em>Cinníonn</em>, e.g. <em>Cinnibh é sin dom.</em></li>
+</ul>
+</li>
+<li>comhartha
+<ul>
+<li>Said <em>comharthaí</em>; plural <em>comharthaithe.</em></li>
+</ul>
+</li>
+<li>comhthionól
+<ul>
+<li>Said <em>cóthalán</em>.</li>
+</ul>
+</li>
+<li>comónta
+<ul>
+<li><em>Camónta, camúnta</em> are what's said the most; <em>duine camónta</em> 'an unpretentious person'</li>
+</ul>
+</li>
+<li>cónra
+<ul>
+<li>Said <em>comhra</em>; 'coffin'</li>
+</ul>
+</li>
+<li>coráiste
+<ul>
+<li>'Cheek, daring'; said <em>cráiste</em>, e.g. <em>Tá coráiste aige.</em></li>
+</ul>
+</li>
+<li>coráistiúil
+<ul>
+<li>Said <em>cráistiúil</em>, e.g. <em>Tá an leanbh son ana-chráistiúil.</em></li>
+</ul>
+</li>
+<li>costasach
+<ul>
+<li>Said <em>costaiseach</em>.</li>
+</ul>
+</li>
+<li>cóta
+<ul>
+<li>'Petticoat'; see <em>casóg</em>.</li>
+</ul>
+</li>
+<li>craemaraí
+<ul>
+<li>'Creamery'</li>
+</ul>
+</li>
+<li>craiceann
+<ul>
+<li>Said <em>cruiceann</em>.</li>
+</ul>
+</li>
+<li><em>crans</em>
+<ul>
+<li>'Affected accent', e.g. <em>Tá crans air a chuid cainte</em>; see <em>tuin.</em></li>
+</ul>
+</li>
+<li>craobh
+<ul>
+<li>'A long strong heather'; 'firewood' in the past.</li>
+</ul>
+</li>
+<li>creachán
+<ul>
+<li>'A small worthless potato'; said <em>criochán</em>.</li>
+</ul>
+</li>
+<li>cros
+<ul>
+<li>'Behaving naughtily', referring to kids; e.g. <em>Ná bíg a' cros</em></li>
+</ul>
+</li>
+<li>crosaire
+<ul>
+<li>'Crossroad'</li>
+</ul>
+</li>
+<li>crua
+<ul>
+<li>Said <em>cruaig</em></li>
+</ul>
+</li>
+<li>cruth
+<ul>
+<li>Said <em>crot</em></li>
+</ul>
+</li>
+<li>Cú
+<ul>
+<li>'Greyhound'; feminine: <em>an chú, na cú;</em> plural <em>cuite</em>.</li>
+</ul>
+</li>
+<li>cuideachta
+<ul>
+<li>Said <em>cleachta;</em> e.g. <em>Bhí ana-chleachta thíos aréir; an-oíche cleachtan</em>.</li>
+</ul>
+</li>
+<li>cuileog
+<ul>
+<li><em>Cuil</em>; plural <em>cuileanna</em>.</li>
+</ul>
+</li>
+<li>cuimhneamh
+<ul>
+<li>Said <em>cuíneamh</em>, 'memory, thought'; see <em>Ana-chuimhneamh ab ea é</em> 'It was a very good idea'.</li>
+</ul>
+</li>
+<li>cuimhníonn
+<ul>
+<li>Said <em>cuíníonn</em>. Has two meanings:</li>
+<li>
+<ol>
+<li>'To remember', e.g. <em>An gcuimhneó tú air sin?</em>.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'To think of', e.g. <em>Ní chuimhneoch éinne air.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>cúirt
+<ul>
+<li>Has two meanings:
+<ul>
+<li>
+<ol>
+<li>'A court of law', e.g. <em>tig na cúirte; cúirt an Daingin.</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Mansion', a big house of one of the old nobility.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>cúiste
+<ul>
+<li>Said <em>cúits</em>; 'couch, sofa'</li>
+</ul>
+</li>
+<li>culaith
+<ul>
+<li>Said <em>cluth</em>, e.g. <em>cluth éadaig, cluth aidhl</em> 'oilskins'</li>
+</ul>
+</li>
+<li>cúntúirt 1
+<ul>
+<li>'Counter (of bar etc.)', e.g. <em>aige cúinne na cúntúrthach.</em></li>
+</ul>
+</li>
+<li>cúntúirt 2
+<ul>
+<li>'Danger'</li>
+</ul>
+</li>
+<li>cúntúirteach
+<ul>
+<li>Said <em>cúntúrthach</em>; 'dangerous' (or <em>dainséarach.</em>)</li>
+</ul>
+</li>
+<li>cupán
+<ul>
+<li>Said <em>cupa</em>, e.g. <em>An ólfá cupa té?</em></li>
+</ul>
+</li>
+<li>cupard
+<ul>
+<li>Said <em>curpad</em>.</li>
+</ul>
+</li>
+<li>cur isteach
+<ul>
+<li>Said <em>cuisteach</em> in phrases like <em>Ní chuir sé aon chuisteach orm</em>.</li>
+</ul>
+</li>
+<li>cúram
+<ul>
+<li>'Chore, task'; <em>as cúram</em> 'unemployed, idle'</li>
+</ul>
+</li>
+<li>cúramach
+<ul>
+<li>'busy' mostly, e.g. <em>Bhíos róchúramach chun labhairt leis; An bhfuileann tú cúramach?</em> See <em>aireach</em>.</li>
+</ul>
+</li>
+<li>dána
+<ul>
+<li>The comparative form is <em>(níos) dáine</em></li>
+</ul>
+</li>
+<li>deabhadh
+<ul>
+<li>'Hurry' e.g. <em>Bhí deabhadh orm; Din deabhadh; an iomarca deabhaig.</em></li>
+</ul>
+</li>
+<li>dearg
+<ul>
+<li>'Red'; it's said of ploughland as well.</li>
+</ul>
+</li>
+<li>deartháir
+<ul>
+<li>Said <em>driotháir</em>.</li>
+</ul>
+</li>
+<li>dealramh
+<ul>
+<li>Said <em>deárthamh</em> or /d´ourhəv/; <em>dé dheárthaimh</em> 'de réir dealraimh'.</li>
+</ul>
+</li>
+<li>dearmad
+<ul>
+<li>Said <em>dearúd</em>.</li>
+</ul>
+</li>
+<li>deatach
+<ul>
+<li>Said <em>dutach</em>.</li>
+</ul>
+</li>
+<li>deirfiúr
+<ul>
+<li>Said <em>driofúr</em>.</li>
+</ul>
+</li>
+<li>diail
+<ul>
+<li>An adjective of praise, 'fine, very good', e.g. <em>Tá an aimsir go diail; Tánn tú go diail</em> 'you are very well'; <em>Is diail an obair é.</em></li>
+</ul>
+</li>
+<li>diallait
+<ul>
+<li>Said <em>iallait</em>, e.g. <em>capall iallaite</em> 'a hunter'.</li>
+</ul>
+</li>
+<li>difear
+<ul>
+<li>Said <em>deifir</em></li>
+</ul>
+</li>
+<li>díol
+<ul>
+<li>'To pay, paying' (instead of <em>íoc</em>)</li>
+</ul>
+</li>
+<li>dóigh
+<ul>
+<li><em>is dóigh le</em> is understood as <em>is dóil le</em>, for example <em>Ba dhóil leat go mbeadh</em> - answer <em>Ba dhóil</em>.</li>
+</ul>
+</li>
+<li>drárs
+<ul>
+<li>'Underpants'; plural <em>dráirseanna</em></li>
+</ul>
+</li>
+<li>dream
+<ul>
+<li>Said /droum/</li>
+</ul>
+</li>
+<li>druideann
+<ul>
+<li>Said <em>drideann</em>, e.g. <em>Drid isteach anso in aice liom.</em></li>
+</ul>
+</li>
+<li>dúiche
+<ul>
+<li>Said <em>dúthaig</em>; has the meanings 'district' and 'country'; genitive <em>na dúthaí</em>.</li>
+</ul>
+</li>
+<li>dumhach
+<ul>
+<li><em>Duí</em> is the dialectal form of this word; meaning 'sandhills'</li>
+</ul>
+</li>
+<li>éadach
+<ul>
+<li>Has these meanings:</li>
+<li>
+<ol>
+<li>'Clothing'.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Dishcloth'.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>earra
+<ul>
+<li>In the phrase <em>Ní maith an earra é</em>, blaming someone or something</li>
+</ul>
+</li>
+<li>eascaine
+<ul>
+<li>'Swearword'; plural <em>eascainí</em></li>
+</ul>
+</li>
+<li>eascainí
+<ul>
+<li><em>Eascanaí</em>, 'swearing', e.g. <em>Ná bí ag eascanaí.</em></li>
+</ul>
+</li>
+<li>eidhneán
+<ul>
+<li>Stress on the first syllable</li>
+</ul>
+</li>
+<li>Éire
+<ul>
+<li>Said <em>Éirinn</em></li>
+</ul>
+</li>
+<li>Éireannach
+<ul>
+<li><em>Éarnach</em> is what's most said</li>
+</ul>
+</li>
+<li><em>éirí</em>
+<ul>
+<li>Said <em>eighrí</em> /air´i:/</li>
+</ul>
+</li>
+<li>eiteach
+<ul>
+<li>'To refuse'. Said <em>iteach</em>, e.g. <em>duine a dh'iteach</em>.</li>
+</ul>
+</li>
+<li>éitheach
+<ul>
+<li>'A lie', e.g. <em>ag insint éithig.</em></li>
+</ul>
+</li>
+<li>fad
+<ul>
+<li>Said <em>faid</em>, e.g. <em>faid agus leithead</em></li>
+</ul>
+</li>
+<li>faic
+<ul>
+<li>'Nothing', e.g. <em>Ní chuala faic mar gheall air.</em></li>
+</ul>
+</li>
+<li>faill
+<ul>
+<li>The <em>f</em> is dropped in the genitive, e.g. <em>barra na haille</em></li>
+</ul>
+</li>
+<li>féach
+<ul>
+<li>When this is an interjection, <em>héach</em> is said, e.g. <em>Héach é seo!</em> <em>h</em> can be said in the conjunction as well, e.g. <em>Chuas síos héach an mbeadh sé tacaithe.</em></li>
+</ul>
+</li>
+<li>fearas
+<ul>
+<li>It's used like this:</li>
+<li>
+<ol>
+<li>'Piece of equipment, device', e.g. <em>Tá fearas aigen ESB chun é sin a dheisiú;</em> plural <em>fearaistí</em>.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li><em>Rud a chur i bhfearas</em> 'to prepare for use'</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>féileacán
+<ul>
+<li>Said <em>peidhleacán</em>.</li>
+</ul>
+</li>
+<li>féin
+<ul>
+<li>Said <em>héin</em> or <em>féin</em>, e.g. <em>mi héin, mi féin</em>.</li>
+</ul>
+</li>
+<li>feo
+<ul>
+<li><em>Feoigiú</em> normally, e.g. <em>Tá na bláthanna a' feoigiú.</em></li>
+</ul>
+</li>
+<li>feoite
+<ul>
+<li><em>Feoigithe</em> normally.</li>
+</ul>
+</li>
+<li>feonn
+<ul>
+<li><em>Feoigíonn</em> is what's said most.</li>
+</ul>
+</li>
+<li>fiafraí
+<ul>
+<li>Said <em>fiarhaí.</em></li>
+</ul>
+</li>
+<li>fiáin
+<ul>
+<li>Said <em>fiain</em>.</li>
+</ul>
+</li>
+<li>fírinneach
+<ul>
+<li>Said 'Truthful, honest'.</li>
+</ul>
+</li>
+<li>fiuchadh
+<ul>
+<li><em>Fliucha</em> 'boiling', e.g. <em>Lig dosna prátaí fliucha; uisce fliuchaig; Tá sé a fliuchaig.</em> See <em>beiriú</em>.</li>
+</ul>
+</li>
+<li>fiúise
+<ul>
+<li>Said <em>fiúsaí</em>; 'fuchsia'; plural <em>fiúsaíos</em>.</li>
+</ul>
+</li>
+<li>fleaige
+<ul>
+<li>
+<ol>
+<li>'Pavement', e.g. <em>Bhí sé im choinne air an bhfleaige</em>.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Flag', e.g. <em>fleaige na hÉireann.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>fothain
+<ul>
+<li>Said <em>foitihin</em>, e.g. <em>Tá foithin sa ghleann.</em></li>
+</ul>
+</li>
+<li>fothainiúil
+<ul>
+<li><em>foithiniúil,</em> e.g. <em>Áit foitiniúil is ea é.</em></li>
+</ul>
+</li>
+<li>fothragadh
+<ul>
+<li>'Fuss'; said /fohə'ragə/.</li>
+</ul>
+</li>
+<li>fréamh
+<ul>
+<li>Said <em>préamh, préach</em>; plural <em>préacha</em>.</li>
+</ul>
+</li>
+<li>fuadar
+<ul>
+<li>'Fuss, bustle', e.g. <em>Tá fuadar fút; fuadar ná feadair</em> 'much ado about nothing'.</li>
+</ul>
+</li>
+<li>fuar
+<ul>
+<li>There's a special usage in the phrase <em>tá fuar agat</em> 'you have no hope'.</li>
+</ul>
+</li>
+<li>fuílleach
+<ul>
+<li>'Plenty', e.g. <em>Tá fuílleach ama agat</em>.</li>
+</ul>
+</li>
+<li>furasta
+<ul>
+<li><em>Frist</em> is what's said the most; <em>friste</em> after the copula, e.g. <em>Is friste dhuit é a dhéanamh; B'fhriste a aithint.</em></li>
+</ul>
+</li>
+<li>fulaingíonn
+<ul>
+<li>Said <em>foiligíonn,</em> e.g. <em>Dh'fhoiligíos mo dhóthain leis.</em></li>
+</ul>
+</li>
+<li>fulaingt
+<ul>
+<li>Said <em>folag</em></li>
+</ul>
+</li>
+<li>gach
+<ul>
+<li>Normally said <em>gach aon</em> or <em>nach aon</em>.</li>
+</ul>
+</li>
+<li>gadaí
+<ul>
+<li>The stress is normally on the first syllable.</li>
+</ul>
+</li>
+<li>Gaeilge
+<ul>
+<li>Said <em>Gaelainn</em>.</li>
+</ul>
+</li>
+<li>gaineamh
+<ul>
+<li>Said <em>gainimh</em>. Inflection: <em>an ghainimh, ualach gainí.</em></li>
+</ul>
+</li>
+<li>gairdín
+<ul>
+<li>For flowers mostly, see <em>garraí;</em> but <em>gairdín úll</em> 'orchard'.</li>
+</ul>
+</li>
+<li>gairid
+<ul>
+<li>Said <em>geairid</em>; <em>bheith geairid duit féin</em> 'to be selfish'</li>
+</ul>
+</li>
+<li>galánta
+<ul>
+<li>
+<ol>
+<li>'Genereous, decent'</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>To be dressed up finely</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>galar
+<ul>
+<li>Often this has the sense '(bad) habit', e.g. <em>Tá an galar céanna orthu son</em> 'they have the same (bad) habit'.</li>
+</ul>
+</li>
+<li>ganfhios
+<ul>
+<li>Said <em>ganas</em>; 'surreptitious behaviour'. <em>i</em> doesn't always eclipse it, e.g. <em>rud a dhéanamh i ganas</em> (or <em>i nganas</em>).</li>
+</ul>
+</li>
+<li><em>ganfhiosaíocht</em>
+<ul>
+<li>Said <em>ganasaíocht</em>; 'going behind somebody's back'</li>
+</ul>
+</li>
+<li>gannchúis
+<ul>
+<li>Said <em>gannachúis</em>; 'scarcity', e.g. <em>aimsir na gannachúise</em>. The adjective <em>gannachúiseach</em> exists as well.</li>
+</ul>
+</li>
+<li>garbhshíon
+<ul>
+<li>Said <em>gairbhín;</em> A cold wet period at the start of May (from the middle of April to the middle of May according to tradition); <em>gairbhín na cuaiche.</em> <em>scairbhín</em> is said too.</li>
+</ul>
+</li>
+<li>garraí
+<ul>
+<li>
+<ol>
+<li>For potatoes or vegetables</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Rickyard'</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>garsún
+<ul>
+<li>Young boy.</li>
+</ul>
+</li>
+<li>geálbh
+<ul>
+<li><em>Geá</em> 'quick trip', e.g. <em>Túrha mé geá siar ann amáireach</em>.</li>
+</ul>
+</li>
+<li>geáird
+<ul>
+<li>'Yard', e.g. <em>geáird na scoile; geáird an chraemaraí</em></li>
+</ul>
+</li>
+<li>geáitsí
+<ul>
+<li>'Capers', e.g. <em>Héach na geáitsí atá aige; geáitsíocht.</em></li>
+</ul>
+</li>
+<li>gealasacha
+<ul>
+<li>Said <em>gealarsaí</em>; 'braces (for trousers)'.</li>
+</ul>
+</li>
+<li>geansaí
+<ul>
+<li>'Pullover', plural <em>geansaíos</em>.</li>
+</ul>
+</li>
+<li>gearr-aighneas
+<ul>
+<li>/a/ is said in the first syllable; 'cheek, back-chat', e.g. <em>Tá ana-ghearraighneas aigen leanbh son; Tá siad ana-ghearraighneastúil.</em></li>
+</ul>
+</li>
+<li>gearrchaile
+<ul>
+<li><em>Gearrachaile</em> is what's said most, sometimes <em>greachaile;</em> 'young girl'.</li>
+</ul>
+</li>
+<li>geataire
+<ul>
+<li><em>Geitire</em> 'rush'; plural <em>geitirí</em>.</li>
+</ul>
+</li>
+<li>géatarsaí
+<ul>
+<li>'Leggings, gaiters, plastic overtrousers'.</li>
+</ul>
+</li>
+<li>giúis
+<ul>
+<li>'Bogdeal'; wood found under the bog.</li>
+</ul>
+</li>
+<li>glas
+<ul>
+<li>'Dark grey (of clothes), blue-grey (of eyes), green (of plants)'.</li>
+</ul>
+</li>
+<li>gleo
+<ul>
+<li>'Noise', e.g. <em>N'fhéadas codailt aigen ngleó;</em> genitive <em>gleóig.</em></li>
+</ul>
+</li>
+<li>golait
+<ul>
+<li>'Channel, culvert'; plural <em>golaití</em></li>
+</ul>
+</li>
+<li>goimh
+<ul>
+<li>Said <em>guv</em>, e.g. <em>Tá an gomh air</em> (of bad weather); <em>tá an gomh dearg air</em> (of a wicked person)</li>
+</ul>
+</li>
+<li>gorm
+<ul>
+<li>'Blue, deep green (of plants)'.</li>
+</ul>
+</li>
+<li>gort
+<ul>
+<li>The normal word for 'field'; see <em>páirc</em></li>
+</ul>
+</li>
+<li>gortaíonn
+<ul>
+<li>Said <em>goirtíonn</em>, e.g. <em>Ghoirtíos mo chois.</em></li>
+</ul>
+</li>
+<li>gortú
+<ul>
+<li>Said <em>goirtiú.</em></li>
+</ul>
+</li>
+<li>groí
+<ul>
+<li>An adjective put with <em>muar</em> for emphasis, e.g. <em>fear muar groí</em></li>
+</ul>
+</li>
+<li>grua
+<ul>
+<li>One of the meanings is the strip of grass beside the road. <em>plaincéadaí an bhóthair</em> is said too.</li>
+</ul>
+</li>
+<li>hácaeir
+<ul>
+<li>'Hawker', a person who goes door to door selling things.</li>
+</ul>
+</li>
+<li>haiceáil
+<ul>
+<li>To abuse something, e.g. <em>mótar a haiceáil</em></li>
+</ul>
+</li>
+<li>haiceáilte
+<ul>
+<li>said <em>haiceálta</em>; a bad appearance on something due to abuse, e.g <em>Tá cuma ana-haiceálta air siúd lé déanaí</em> (of a person).</li>
+</ul>
+</li>
+<li>haras
+<ul>
+<li>Said <em>harasaí</em>; 'hangover' of the worst kind; (from 'horrors')</li>
+</ul>
+</li>
+<li>iann
+<ul>
+<li>Synonym of <em>dúnann</em> (both are said); verbal noun <em>iamh</em>, verbal adjective <em>iata</em>; e.g. <em>Ní chás duit an doras a dh'iamh; B'fhearra dhom iamh air na cearca; Tá an doras iata; Beidh na pubanna iata amáireach;</em> the form <em>ia</em> instead of <em>iamh</em> in the phrase <em>fé ia an tí</em>, e.g. <em>an méid daoine atá fé ia an tí.</em></li>
+</ul>
+</li>
+<li>iarta
+<ul>
+<li>Said /airtə/</li>
+</ul>
+</li>
+<li>íle
+<ul>
+<li>'Oil for an engine'</li>
+</ul>
+</li>
+<li>imeall
+<ul>
+<li>Said <em>umall</em> normally, e.g. <em>air umall an pharóiste;</em> see <em>leathimeall.</em></li>
+</ul>
+</li>
+<li>in iúl
+<ul>
+<li>Said <em>in úil</em> (This is the historical form)</li>
+</ul>
+</li>
+<li>inniu
+<ul>
+<li>Said <em>inniubh</em></li>
+</ul>
+</li>
+<li>inse
+<ul>
+<li>A low field beside a river</li>
+</ul>
+</li>
+<li>iomadúil
+<ul>
+<li>'Plentiful', the opposite of being <em>gannachúiseach, tearc</em></li>
+</ul>
+</li>
+<li>iomaire
+<ul>
+<li>'Potato-ridge'; or <em>leaba phrátaí</em></li>
+</ul>
+</li>
+<li>iomarca
+<ul>
+<li>Said <em>an iumarca</em> or <em>an iumarta</em> (<em>an iumad</em> exists too)</li>
+</ul>
+</li>
+<li>ionad
+<ul>
+<li>Said <em>inead</em>, e.g. <em>Chuas 'on phub in inead dul abhaile.</em></li>
+</ul>
+</li>
+<li>ionramháil
+<ul>
+<li>Said <em>úndraváil;</em> it's used like this:</li>
+<li>
+<ol>
+<li>'To wield', e.g. <em>úirlis a dh'ionramháil.</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'To control, manipulate', e.g. <em>duine a dh'ionramháil.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Láir Bhán
+<ul>
+<li><em>An Láir Bhán</em> 'The Milky Way'</li>
+</ul>
+</li>
+<li>lámhacán
+<ul>
+<li>Said /louŋka:n/; stress on the first syllable.</li>
+</ul>
+</li>
+<li>lamhnán
+<ul>
+<li>Stress on the first syllable.</li>
+</ul>
+</li>
+<li>lánúin
+<ul>
+<li>Said <em>Lánú</em>, e.g. <em>lánú an tí;</em> plural <em>lánúintí, lánuithe.</em></li>
+</ul>
+</li>
+<li>leaba
+<ul>
+<li>Said <em>leabaig</em> or <em>leaba</em></li>
+</ul>
+</li>
+<li>leadhb
+<ul>
+<li>'Lick', e.g. <em>Dá bhfaighfá leadhb ó mhadra.</em></li>
+</ul>
+</li>
+<li>leadhbadh
+<ul>
+<li>'Licking', e.g. <em>Tá an cat á leabhbadh féin.</em></li>
+</ul>
+</li>
+<li>leadhpáil
+<ul>
+<li>Another form of <em>leadhbadh.</em></li>
+</ul>
+</li>
+<li>leamhgháire
+<ul>
+<li><em>Leamhgháirí</em> is what's said most; 'smiling', e.g. <em>Bíonn sé a' leamhgháirí an t-am air fad.</em> The stress on the first syllable.</li>
+</ul>
+</li>
+<li>léan
+<ul>
+<li>In the interjection <em>Léan air...,</em> e.g. <em>Léan ort.</em> The vowel /e:/ in <em>mo léan.</em></li>
+</ul>
+</li>
+<li>leata
+<ul>
+<li>'Perished, famished', e.g. <em>Táim leata aigen bhfuacht; Bhíos leata aigen ocaras.</em></li>
+</ul>
+</li>
+<li>leathimeall
+<ul>
+<li>Said <em>leathumall</em> with the first syllable stressed, e.g. <em>amuigh ar leathumall</em> 'out on the edge'</li>
+</ul>
+</li>
+<li>leibhéal
+<ul>
+<li>Said <em>livéal</em>; <em>Bheith a' leibhéal air dhuine</em> 'to be viciously mocking someone'</li>
+</ul>
+</li>
+<li>leis
+<ul>
+<li>'Also', e.g. <em>Bhíos héin leis ann.</em></li>
+</ul>
+</li>
+<li>leisce
+<ul>
+<li>Has two meanings:</li>
+<li>
+<ol>
+<li>'Laziness', e.g. <em>Ní liceach an leisce dho é a dhéanamh.</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Reluctance', e.g. <em>Tá leisce orm triail a bhaint as.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>leoraí
+<ul>
+<li>The vowel /o/ in the first syllable.</li>
+</ul>
+</li>
+<li>liathróid
+<ul>
+<li>Said <em>liarthóid</em>.</li>
+</ul>
+</li>
+<li>litir
+<ul>
+<li>Said <em>leitir</em>.</li>
+</ul>
+</li>
+<li>lofa
+<ul>
+<li>Normally a disparaging adjective, e.g. <em>Tá an piúnt so lofa.</em> <em>lobhaite</em> /lout´ɪ/ is said in the sense 'rotten' e.g. <em>Tá an féar lobhaite.</em></li>
+</ul>
+</li>
+<li>loiteann
+<ul>
+<li><em>Laiteann,</em> e.g. <em>Ná lait é sin orm...</em></li>
+</ul>
+</li>
+<li>loitithe
+<ul>
+<li><em>Laitithe,</em> e.g. <em>Tá mo threabhsar laitithe.</em></li>
+</ul>
+</li>
+<li>lot
+<ul>
+<li>Said <em>lat</em>.</li>
+</ul>
+</li>
+<li>lom
+<ul>
+<li>Has these meanings:</li>
+<li>
+<ol>
+<li>'Bare', e.g. <em>Áit ana-lom is ea é.</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Thin', e.g. <em>Tá sé fachta ana-lom le déanaí.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>loscadh daighe
+<ul>
+<li>Said <em>loscadaí;</em> 'heartburn'.</li>
+</ul>
+</li>
+<li>macánta
+<ul>
+<li>'Harmless' is the most common meaning of this, e.g. <em>Fear bocht macánta is ea é; Madara macánta is ea é.</em></li>
+</ul>
+</li>
+<li>maicréal
+<ul>
+<li>Said <em>Maircréal.</em></li>
+</ul>
+</li>
+<li>maide
+<ul>
+<li>The normal word for 'stick'.</li>
+</ul>
+</li>
+<li>maidin
+<ul>
+<li><em>air maidin</em> is said, but <em>fé mhaidean, go maidean, ó mhaidean.</em></li>
+</ul>
+</li>
+<li>mairg
+<ul>
+<li>In the phrase <em>Ní chuir sé aon mhairg orm</em> 'It didn't bother me'.</li>
+</ul>
+</li>
+<li>mallaithe
+<ul>
+<li>'Cross, bad-tempered', e.g. <em>duine mallaithe, madra mallaithe.</em></li>
+</ul>
+</li>
+<li>mám
+<ul>
+<li>'Pass between two hills', e.g. <em>Mám na Gaoithe.</em></li>
+</ul>
+</li>
+<li>maoileann
+<ul>
+<li>Said <em>maoilinn</em>; 'flat-topped hill'.</li>
+</ul>
+</li>
+<li>marcaíocht
+<ul>
+<li>'Lift', e.g. <em>An bhfuil marcaíocht bhuait?</em>; see <em>síob</em>.</li>
+</ul>
+</li>
+<li>meadar
+<ul>
+<li>'Churn'.</li>
+</ul>
+</li>
+<li>meaingeal
+<ul>
+<li><em>Meaingil</em> 'Mangel(-wurzel)'; plural <em>meaingilsaí, meangalsaí</em></li>
+</ul>
+</li>
+<li>meaits
+<ul>
+<li>
+<ol>
+<li>'Match';</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Football etc. match'.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Meiriceá
+<ul>
+<li>Said <em>Meirice</em> normally.</li>
+</ul>
+</li>
+<li>milleánú
+<ul>
+<li>'To blame'; said <em>mleánú</em> normally, e.g. <em>duine a mhleánú</em></li>
+</ul>
+</li>
+<li>milseán
+<ul>
+<li>Said <em>mísleán</em> or <em>mílseán</em>.</li>
+</ul>
+</li>
+<li>mínáire
+<ul>
+<li>Said <em>míneáirí</em>; 'anger'</li>
+</ul>
+</li>
+<li>míniú 1
+<ul>
+<li>
+<ol>
+<li>'To explain', e.g. <em>focal a mhíniú.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>míniú 2
+<ul>
+<li>
+<ol start="2">
+<li>'To tame, teach a lesson to', e.g. <em>duine a mhíniú</em>; <em>Míneoidh son é</em> 'That will teach him'.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>míol
+<ul>
+<li>'Louse', and other insects: <em>míola corra, corramhíola</em> 'midges'; <em>míola críonna</em> 'woodworm'.</li>
+</ul>
+</li>
+<li>miotóg
+<ul>
+<li>'Pinch', e.g. <em>Miotóg a bhaint as duine.</em></li>
+</ul>
+</li>
+<li>mísheans
+<ul>
+<li>'Bad luck', e.g. <em>Le mísheans a tharla sé</em>. The stress on the first syllable.</li>
+</ul>
+</li>
+<li>misneach
+<ul>
+<li>
+<ol>
+<li>'Courage'</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Appetite', e.g. <em>Níl aon mhisneach chun bíg agam.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>mitín
+<ul>
+<li>'Glove'; mittens without fingers are called <em>laimhne</em> /lain´ɪ/; <em>láimhín</em> = 'little hand'.</li>
+</ul>
+</li>
+<li>mór
+<ul>
+<li>Said <em>muar</em>, but <em>múr</em> in <em>foramhúr, múrán</em>.</li>
+</ul>
+</li>
+<li>mótar
+<ul>
+<li>'Car'.</li>
+</ul>
+</li>
+<li>muinchille
+<ul>
+<li>Has various forms: <em>muilirte, muilearta, muinhirle, murailte</em></li>
+</ul>
+</li>
+<li>muinteartha
+<ul>
+<li>Said <em>muíontartha</em>; has these meanings:</li>
+<li>
+<ol>
+<li>'Related', e.g. <em>Daoine muíontartha dhom</em> 'gaolta dom'.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Friendly', e.g. <em>Tá Seán ana-mhuíontartha; Madara muíontartha is ea é.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>muintir
+<ul>
+<li>Has two meanings:</li>
+<li>
+<ol>
+<li>'Inhabitants', e.g. <em>Muintir na háite.</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Parents', e.g. <em>Mo mhuintir.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>náireach
+<ul>
+<li>In the sense 'shy' often.</li>
+</ul>
+</li>
+<li>naimhdeach
+<ul>
+<li>Said <em>namhdach</em>.</li>
+</ul>
+</li>
+<li>namhaid
+<ul>
+<li>Plural /noud´ɪ/ <em>namhaide.</em></li>
+</ul>
+</li>
+<li>naomhóg
+<ul>
+<li><em>naemhóg</em> and <em>nadhmhóg</em> are said. Certain people understand it as <em>adhmhóg</em>, e.g. <em>criú na hadhmhóige.</em></li>
+</ul>
+</li>
+<li>nath
+<ul>
+<li>In the phrases <em>Ní chuireas aon nath ann</em> 'I took no notice of it'; <em>Ní haon nath aige é</em> 'It is no bother to him'.</li>
+</ul>
+</li>
+<li>neamhcheart
+<ul>
+<li>Said <em>neacheart</em>; 'incorrect', e.g. <em>Bhí an míniú son nea-cheart.</em></li>
+</ul>
+</li>
+<li>neantóg
+<ul>
+<li>Said <em>leanntóg</em>.</li>
+</ul>
+</li>
+<li>nóiméad
+<ul>
+<li>Has various forms: <em>nóimit, nóimint, neomat, neomant..</em></li>
+</ul>
+</li>
+<li>nótált(h)a
+<ul>
+<li>An adjective of praise, e.g. <em>Tá an stuif sin nótált(h)a; Scoláirthe nótált(h)a ab ea é; an ceann is nótált(h)a a chonac mé riamh.</em></li>
+</ul>
+</li>
+<li>oileán
+<ul>
+<li><em>Leán</em> is what's said most; <em>an t-leán, múintir an leáin.</em></li>
+</ul>
+</li>
+<li>oireann
+<ul>
+<li>Said <em>ireann</em>; 'suits, agrees with', m.sh <em>Má dh'ireann sé sin duit</em>. See <em>rúnaíonn.</em></li>
+</ul>
+</li>
+<li>oiriúnach
+<ul>
+<li>Said <em>rúnach</em>.</li>
+</ul>
+</li>
+<li>oiriúnaíonn
+<ul>
+<li>Said <em>rúnaíonn</em>; verb based on the adjective <em>rúnach</em> (oiriúnach); 'suits, fits', m.sh <em>má rúnaíonn sé thú</em> 'if it fits you'</li>
+</ul>
+</li>
+<li>ola
+<ul>
+<li>'Ointment, unction'; <em>an Ola Dhéanach</em></li>
+</ul>
+</li>
+<li>ordaithe
+<ul>
+<li>'Warned', e.g. <em>Tá drochaimsir ordaithe.</em></li>
+</ul>
+</li>
+<li>ordóg
+<ul>
+<li>Said <em>Árdóg</em></li>
+</ul>
+</li>
+<li>ordú
+<ul>
+<li>
+<ol>
+<li>'Order', e.g. <em>Tugach ordú dho é a dhéanamh.</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Warning', e.g. <em>Ní tugach aon ordú go mbech sé a 'teach</em>.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>ospidéal
+<ul>
+<li>Said <em>Óispidéal</em>, with the stress on the first syllable.</li>
+</ul>
+</li>
+<li>pábhaile
+<ul>
+<li>Said <em>páile</em>; 'cement platform around a house'</li>
+</ul>
+</li>
+<li>paca
+<ul>
+<li>'Sack (bag)'.</li>
+</ul>
+</li>
+<li>paidrín
+<ul>
+<li><em>An Paidrín Páirteach 'the Rosary'</em>.</li>
+</ul>
+</li>
+<li>pailm
+<ul>
+<li>Said <em>sailm</em>; <em>Domhnach na Sailme; crann sailme</em> 'cypress'</li>
+</ul>
+</li>
+<li>páirc
+<ul>
+<li>A large, wide, grassy field.</li>
+</ul>
+</li>
+<li>páirtí
+<ul>
+<li>'Companion, loyal friend', e.g. <em>páirtí scoile</em>.</li>
+</ul>
+</li>
+<li>pasáil
+<ul>
+<li>'To trample', e.g. <em>Rud a phasáil féd chosa</em>.</li>
+</ul>
+</li>
+<li>péire
+<ul>
+<li>Said <em>feidhre/peidhre</em>, e.g. <em>feidhre bróg</em>.</li>
+</ul>
+</li>
+<li>péist
+<ul>
+<li><em>Piast</em> is the nominative singular, <em>péiste</em> is the genitive.</li>
+</ul>
+</li>
+<li><em>piocadh</em>
+<ul>
+<li>Said <em>priocadh</em></li>
+</ul>
+</li>
+<li>píoláid
+<ul>
+<li>A word for a palace.</li>
+</ul>
+</li>
+<li>pionós
+<ul>
+<li>Said <em>pneós, pniús</em>. 'A large pain' is the most common meaning, e.g. <em>Fuaireas ana-phionós óm mhéar.</em></li>
+</ul>
+</li>
+<li>pionta
+<ul>
+<li>Said <em>piúnt;</em> plural <em>pínt</em>.</li>
+</ul>
+</li>
+<li>píopa
+<ul>
+<li>A water pipe, for example.</li>
+</ul>
+</li>
+<li>píp
+<ul>
+<li>'A pipe for tobacco.'</li>
+</ul>
+</li>
+<li>piús
+<ul>
+<li>'purple'</li>
+</ul>
+</li>
+<li>plean
+<ul>
+<li>An idea, a scheme, e.g. <em>Ana-phlean ab ea é</em> (a great idea); <em>Le plean a dineadh é</em> (for a joke).</li>
+</ul>
+</li>
+<li>pluda
+<ul>
+<li>'Mud', e.g. <em>bróda pludaig</em>. The word <em>lathaig</em> exists too.</li>
+</ul>
+</li>
+<li>póirseáil
+<ul>
+<li>'Rummaging'</li>
+</ul>
+</li>
+<li>port
+<ul>
+<li>'Riverbank'</li>
+</ul>
+</li>
+<li>pósaí
+<ul>
+<li>'A small coloured flower.'</li>
+</ul>
+</li>
+<li>prapáil
+<ul>
+<li>'Get ready, get going', e.g. <em>B'fhearra dhúinn a bheith a' prapáil.</em></li>
+</ul>
+</li>
+<li>préachán
+<ul>
+<li>Said <em>príochán</em>.</li>
+</ul>
+</li>
+<li>púca peill
+<ul>
+<li>Said <em>púca paill</em>, 'mushroom'.</li>
+</ul>
+</li>
+<li>puinn
+<ul>
+<li>In negative sentences, e.g. <em>Níl puinn airgid agam; Ni thagann sé timpeall puinn anois.</em></li>
+</ul>
+</li>
+<li>púitse
+<ul>
+<li>Said <em>púits</em>; a small bag.</li>
+</ul>
+</li>
+<li>pus
+<ul>
+<li>Has two meanings:</li>
+<li>
+<ol>
+<li>A disparaging word for a mouth, e.g. <em>Tá pus gránna air siúd; pus capaill; pus madra.</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'lip', e.g. <em>an pus uachtarach</em>.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>pusaíl
+<ul>
+<li><em>A' pusaíl ghoil</em> 'sobbing'</li>
+</ul>
+</li>
+<li>rabhnáilte
+<ul>
+<li>Said <em>rúineált(h)a/rabhaineált(h)a;</em> 'rounded'.</li>
+</ul>
+</li>
+<li>raic
+<ul>
+<li>'Wreckage, flotsam, jetsam'; e.g. <em>bád raice</em>.</li>
+</ul>
+</li>
+<li>rámhainn
+<ul>
+<li>Said /roun/. It's understood as <em>ronn</em> or <em>rann</em>; genitive <em>(feac) na roinne;</em> plural <em>ranna</em>.</li>
+</ul>
+</li>
+<li>réapáil.
+<ul>
+<li>'Excavating, clearing out'; e.g. <em>Tá láthair an tí á réapáil amach acu inniubh.</em></li>
+</ul>
+</li>
+<li>réalta
+<ul>
+<li>Said <em>réilthín</em>.</li>
+</ul>
+</li>
+<li>rómhar
+<ul>
+<li>'Digging'; said <em>rúr/rór,</em> e.g. <em>Tá sé amu sa ghort a' rómhar.</em></li>
+</ul>
+</li>
+<li>rúta
+<ul>
+<li>'A root'</li>
+</ul>
+</li>
+<li>sá
+<ul>
+<li>One of the meanings is 'pushing', e.g. <em>Bheith a' sá rothar romhait air an mbóthar;</em> 'encouraging a dog' as well. e.g. <em>Na madaraí a shá  ina ndiaig</em> 'to send the dogs after them'.</li>
+</ul>
+</li>
+<li>saghas
+<ul>
+<li>'Kind of', e.g. <em>Cén saghas mótair atá aige?</em></li>
+</ul>
+</li>
+<li>salach
+<ul>
+<li>Said <em>slach</em>. Has the meaning 'full of weeds' referring to a field: <em>gort salach</em>.</li>
+</ul>
+</li>
+<li>salachar
+<ul>
+<li>Said <em>slachar</em>; has the following meanings:</li>
+<li>
+<ol>
+<li>'Dirt', e.g. <em>Tá slachar éigin air an urlár.</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Weeds', e.g. <em>Héach an slachar go léir sa ghort son.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>saoire
+<ul>
+<li><em>Lá saoire</em> 'a church holiday'; <em>a' briseadh na saoire</em> 'breaking the Sabbath (or holy day)'.</li>
+</ul>
+</li>
+<li>saoiste
+<ul>
+<li>'Foreman'.</li>
+</ul>
+</li>
+<li>saoráideach
+<ul>
+<li>'Easy', e.g. <em>post saoráideach</em> 'an easy job'; <em>Is breá saoráideach a dhineadar é sin; Tháinig sé ana-shaoráideach orthu.</em></li>
+</ul>
+</li>
+<li>sásar
+<ul>
+<li>Or <em>fochupán</em>.</li>
+</ul>
+</li>
+<li>scabhait
+<ul>
+<li><em>Scabhait uisce</em> 'a jet of water in the air'</li>
+</ul>
+</li>
+<li>scagadh
+<ul>
+<li><em>prátaí a scagadh</em> 'to strain potatoes'</li>
+</ul>
+</li>
+<li>scaif
+<ul>
+<li>Said <em>sceaif</em>; 'woman's headscarf'.</li>
+</ul>
+</li>
+<li>scailéathan
+<ul>
+<li>'Wild exaggeration'.</li>
+</ul>
+</li>
+<li>scamall 1
+<ul>
+<li>'Cloud'.</li>
+</ul>
+</li>
+<li>scamall 2
+<ul>
+<li>'A cause for surprise' (from <em>scannall</em>), e.g. <em>Is muar an scamall Dé é; Ba mhór an scamall an méid a dhineadar in ano lá amháin.</em></li>
+</ul>
+</li>
+<li>scamhadh
+<ul>
+<li>Said <em>scu</em>; <em>prátaí a scú</em> 'to peel them'</li>
+</ul>
+</li>
+<li>scamhóg
+<ul>
+<li>Said <em>scamóg</em>, with /ə/ in the first syllable</li>
+</ul>
+</li>
+<li>scanradh
+<ul>
+<li>One of the meanings is 'a cause for surprise', e.g. <em>Ba mhuar an scanradh é.</em></li>
+</ul>
+</li>
+<li>sceach
+<ul>
+<li>'Thornbush', e.g. <em>sceach gheal</em> 'whitethorn'.</li>
+</ul>
+</li>
+<li>sceacha
+<ul>
+<li>'Briars' (instead of 'driseacha'); <em>brainse sceiche</em> 'a briar'.</li>
+<li>Said <em>scioltán</em>, 'potato set'.</li>
+</ul>
+</li>
+<li>sceamhaíl
+<ul>
+<li>'Barking'.</li>
+</ul>
+</li>
+<li>sceitimíní
+<ul>
+<li><em>geitimíní</em> is said as well.</li>
+</ul>
+</li>
+<li>sclábhaí
+<ul>
+<li>'Labourer'.</li>
+</ul>
+</li>
+<li>sconna
+<ul>
+<li>'Small waterfall in stream'.</li>
+</ul>
+</li>
+<li>scrabhadh
+<ul>
+<li>'scrape', e.g. <em>Scrabhaigh an cat mi.</em></li>
+</ul>
+</li>
+<li>scriosadh
+<ul>
+<li><em>Prátaí a scriosadh</em> 'an chré a bhaint díobh'.</li>
+</ul>
+</li>
+<li>scuab
+<ul>
+<li>'Broom' made of heather or a plant like it.</li>
+</ul>
+</li>
+<li>seál póca
+<ul>
+<li>'Handkerchief'</li>
+</ul>
+</li>
+<li>seanbhlas
+<ul>
+<li>Said <em>seanabhlas</em>; 'bitterness, disgust', e.g. <em>rud a rá le seanbhlas/go seanbhlastúil.</em></li>
+</ul>
+</li>
+<li>seans
+<ul>
+<li>Has these meanings:</li>
+<li>
+<ol>
+<li>'Chance', e.g. <em>Lé seans a fuaireas é.</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Narrow excape', m.sh <em>Bhí seans leat; Bhí ana-sheans leis; Fuair sé ana-sheans.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>seift
+<ul>
+<li>'Plan, strategem'.</li>
+</ul>
+</li>
+<li>seinm
+<ul>
+<li>Said <em>seimint</em> or <em>seimt</em>.</li>
+</ul>
+</li>
+<li>seinneann
+<ul>
+<li>Said <em>semeann</em>, e.g. <em>Sheimeas dhá phort.</em></li>
+</ul>
+</li>
+<li>séipéal
+<ul>
+<li>Said <em>sáipéal</em>.</li>
+</ul>
+</li>
+<li>seirbheáil
+<ul>
+<li>To set the law on someone; <em>duine a sheirbheáil</em>.</li>
+</ul>
+</li>
+<li>seó
+<ul>
+<li><em>A' seó</em> 'playing'. The genitive form <em>seóig</em> is use din the meaning 'amusing, funny', e.g. <em>scéal seóig.</em></li>
+</ul>
+</li>
+<li>seomra
+<ul>
+<li>Said <em>seómara, siúmara</em> /s´oumərə/; has these meanings:</li>
+<li>
+<ol>
+<li>'Room in house', e.g. <em>Trí sheomra colata atá ann.</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Outhouse', e.g. <em>Seomraí na mba</em>.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>síob
+<ul>
+<li>'Spin, piggyback', e.g. <em>síob a thúirt do dhuine air rothar; síob a thúirt do leanbh air do dhrom.</em></li>
+</ul>
+</li>
+<li>siúcra
+<ul>
+<li>Said <em>siúicre</em>.</li>
+</ul>
+</li>
+<li>siúit
+<ul>
+<li>'Waterchute', e.g. <em>uisce na siúite</em>.</li>
+</ul>
+</li>
+<li>slapar
+<ul>
+<li>'Large branch on tree'; the small one is a <em>géagán</em>; see <em>craobh</em>.</li>
+</ul>
+</li>
+<li>sléit
+<ul>
+<li>Or <em>slinn</em>.</li>
+</ul>
+</li>
+<li>slí
+<ul>
+<li>One of the meanings is 'space', e.g. <em>Níl aon tslí sa mhótar.</em></li>
+</ul>
+</li>
+<li>sliabh
+<ul>
+<li>Rough ground; it needn't be on a hill.</li>
+</ul>
+</li>
+<li>slipéar
+<ul>
+<li>Said <em>slipéir</em>; 'formal shoe'; 'Sunday shoe'.</li>
+</ul>
+</li>
+<li>snáthaid
+<ul>
+<li>Said <em>snáthad</em>; <em>trí chró na snáthaide; comh caol le snáthaid.</em></li>
+</ul>
+</li>
+<li>snaidhm
+<ul>
+<li>Said <em>snaím</em>.</li>
+</ul>
+</li>
+<li>socrú
+<ul>
+<li>'To arrange, resolve', e.g. <em>Dhineas socrú eatarthu.,</em> and <em>socairt</em> 'to repair' mostly, e.g. <em>Caithfead an clog a shocairt</em>.</li>
+</ul>
+</li>
+<li>sóinseáil
+<ul>
+<li>Said <em>seoinseáil</em>; has these meanings:</li>
+<li>
+<ol>
+<li>'Change (of money)', e.g. <em>Bhfuil aon tseoinseáil agat?</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Change of weather', m.sh <em>Tá seoinseáil air.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>soitheach
+<ul>
+<li>Said <em>sathach</em>; 'barrel'</li>
+</ul>
+</li>
+<li>speabhraoidí
+<ul>
+<li>'Confusion', e.g. <em>Tá speabhraoidí ort.</em></li>
+</ul>
+</li>
+<li>spiorad
+<ul>
+<li>Said <em>sprid</em>, 'ghost' is the most common meaning.</li>
+</ul>
+</li>
+<li>splanc
+<ul>
+<li>'Flash of lightning'.</li>
+</ul>
+</li>
+<li>splancacha
+<ul>
+<li>'Lightning'.</li>
+</ul>
+</li>
+<li>spúnóg
+<ul>
+<li>Said <em>spíonóg, spneog</em> or <em>spniúg</em>.</li>
+</ul>
+</li>
+<li>srúill
+<ul>
+<li>'Stream on strand', e.g. <em>Tá dhá shrúill air Thráig an Fhíona.</em></li>
+</ul>
+</li>
+<li>stáir
+<ul>
+<li>A long period of time, e.g. <em>Ní fhaca lé stáir é.</em></li>
+</ul>
+</li>
+<li>stangadh
+<ul>
+<li>A dry spell, e.g. <em>stangadh triumaig; stangadh fuachta</em>.</li>
+</ul>
+</li>
+<li>stóinsithe
+<ul>
+<li>'Stubborn'.</li>
+</ul>
+</li>
+<li>stumpa
+<ul>
+<li>Said <em>stúmpa</em>; a disrespectful word for a person, e.g. <em>stúmpa amadáin; a stúmpa.</em></li>
+</ul>
+</li>
+<li>straidhn
+<ul>
+<li>'Anger'.</li>
+</ul>
+</li>
+<li>strainséir
+<ul>
+<li>Said <em>stróinséir;</em> 'a tourist, a visitor to the place'.</li>
+</ul>
+</li>
+<li>suimint
+<ul>
+<li>'Cement'.</li>
+</ul>
+</li>
+<li>suimiúil
+<ul>
+<li><em>Suímiúil</em> is what's said the most.</li>
+</ul>
+</li>
+<li>svae
+<ul>
+<li>Said <em>scvae,</em> /skwe:/, 'sway'; e.g. <em>Bhí an scvae aige naomhóg na Muirí; Thugadar an scvae leo</em>.</li>
+</ul>
+</li>
+<li>taibhse
+<ul>
+<li>Said <em>taidhse</em>; 'ghost' (<em>sprid</em> as well).</li>
+</ul>
+</li>
+<li>taibhseach
+<ul>
+<li>Said <em>taidhseach</em>; 'big and visible', e.g. <em>tig muar taidhseach</em>.</li>
+</ul>
+</li>
+<li>taibhsíonn
+<ul>
+<li>Said <em>taidhsíonn</em>; 'appears', e.g. <em>Taidhsíodh dom go reibh duine éigin an.</em></li>
+</ul>
+</li>
+<li>taighde
+<ul>
+<li>Said <em>toide</em>; 'searching, digging', e.g. <em>a' toide i bpoll</em></li>
+</ul>
+</li>
+<li>taispeáin
+<ul>
+<li>Said <em>taspáin</em> or <em>spáin</em>.</li>
+</ul>
+</li>
+<li>támáilte
+<ul>
+<li>'Shy'.</li>
+</ul>
+</li>
+<li>tarraingt
+<ul>
+<li>Said <em>tarrac</em>; has these meanings:</li>
+<li>
+<ol>
+<li>'To pull', e.g. <em>Rud a tharrac id dhiaig</em>.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Demand', e.g. <em>Tá tarrac air bhia anso.</em></li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>'Surge (in sea)', e.g. <em>Tá tarrac ann inniubh</em>.</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>'To mention', e.g. <em>Ní mhaith liom é a tharrac anuas B'fhiú dhuit é a tharrac chuige uair éigin.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>tart
+<ul>
+<li>Said <em>tort</em>.</li>
+</ul>
+</li>
+<li>teampall
+<ul>
+<li>'A graveyard'.</li>
+</ul>
+</li>
+<li>téann
+<ul>
+<li>'Warms'; said <em>téamhaíonn</em> or <em>téíonn</em></li>
+</ul>
+</li>
+<li>ticéad
+<ul>
+<li>Said <em>tuicéad</em>; has various meanings: 'ticket, receipt slip, label on clothes'.</li>
+</ul>
+</li>
+<li>tincéir
+<ul>
+<li>Said <em>tuíncéir</em>.</li>
+</ul>
+</li>
+<li>tindeáil
+<ul>
+<li>'Serving', e.g. <em>Bhíos a' tindeáil sa bheár.</em></li>
+</ul>
+</li>
+<li>tindeáil air
+<ul>
+<li>'Looking after', e.g. <em>bheith a' tindeáil air leanaí</em> (or old people, or animals)</li>
+</ul>
+</li>
+<li>tinn
+<ul>
+<li>'Sore'; with the diphthong /ai/; different to <em>breoite</em> 'sick'.</li>
+</ul>
+</li>
+<li>tinneas
+<ul>
+<li>Has these meanings:</li>
+<li>
+<ol>
+<li>'Pain'</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Concern', e.g. <em>Níl sé a' cuir puinn tinnis ormsa; Ná bíodh aon tinneas ort mar gheall air; Tá praghas an pheitril a' cuir tinnis air scata daoine.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>tiomáint
+<ul>
+<li>Said <em>tumáint, comáint;</em> has these meanings:</li>
+<li>
+<ol>
+<li>'Driving', e.g. <em>An féidir leat comáint; na ba a chomáint abhaile..</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Bustle', e.g. <em>beidh tiomáint ann</em>.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>tionlacan
+<ul>
+<li>Said <em>túlacan.</em></li>
+</ul>
+</li>
+<li>tiontú
+<ul>
+<li>'Turning'; said <em>úntú/úntó</em>; a common word.</li>
+</ul>
+</li>
+<li>tobann
+<ul>
+<li>Said <em>obann</em>.</li>
+</ul>
+</li>
+<li>tofa
+<ul>
+<li>An adjective of praise, e.g. <em>amhránaí tofa</em>.</li>
+</ul>
+</li>
+<li>toirmeasc
+<ul>
+<li>'Trouble', e.g. <em>Fear muar toirmisc</em>.</li>
+</ul>
+</li>
+<li>tornapa
+<ul>
+<li>Said <em>teornap</em>, with the stress on the second syllable.</li>
+</ul>
+</li>
+<li>tosach
+<ul>
+<li>'Front, beginning', e.g. <em>tosach an ranga, tosach na bliana</em>. <em>tús</em> mostly survives in adverbs like <em>ar dtúis</em> and <em>ó thúis deireadh</em>.</li>
+</ul>
+</li>
+<li>trá
+<ul>
+<li>Said <em>tráig</em>.</li>
+</ul>
+</li>
+<li>trangláil
+<ul>
+<li>'Trouble', e.g. <em>Bhí ana-thrangaláil mar gheall air</em></li>
+</ul>
+</li>
+<li>triall ar
+<ul>
+<li>'Seeking, fetching', e.g. <em>dul a' triall air rud</em> 'going to fetch something'; <em>chuas 'on tsiopa a' triall air phiúnt bainne; Tuca mé a' triall ort leis an mótar</em> 'I'll come to collect you'.</li>
+</ul>
+</li>
+<li>triomach
+<ul>
+<li>Said <em>triumach</em>; 'dryness (of weather)'; the stress on the first syllable; e.g. <em>Tá triumach breá ann inniubh</em> 'there are good drying conditions today'; <em>stanga triumaig</em> 'a drought'.</li>
+</ul>
+</li>
+<li>troid
+<ul>
+<li>'Quarreling', e.g. <em>Bíonn muintir an tí sin a' troid i gcónaí.</em></li>
+</ul>
+</li>
+<li>tuige
+<ul>
+<li>'Osier', e.g. <em>Tá tuigí a fás cois na habhann.</em></li>
+</ul>
+</li>
+<li>tuin
+<ul>
+<li>'Strange or fancy speech'; e.g. <em>Tá tuin air a chuid cainte.</em></li>
+</ul>
+</li>
+<li>tulca
+<ul>
+<li>'Heavy fall of rain, snow'; e.g. <em>Dhin sé ana-thulca air maidin; Thit tulca sneachtaig seachtain tréis na Nollag;</em> <em>tulca feirge</em> as well.</li>
+</ul>
+</li>
+<li>uaine
+<ul>
+<li>Said <em>uainthe</em>; 'green (artificial)', e.g. <em>ribín uainthe, mótar uainthe.</em> The word for 'natural green' is <em>glas</em>.</li>
+</ul>
+</li>
+<li>údarás
+<ul>
+<li>Has these meanings:</li>
+<li>
+<ol>
+<li>'Authority', e.g. <em>Údarás na Gaeltachta.</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Cheek, presumption' in the case of an adult, e.g. <em>Tá an-údarás aige.</em></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>várnáil
+<ul>
+<li>Said <em>várneáil</em>; 'warning'; or <em>foláireamh</em>.</li>
+</ul>
+</li>
+<li>vásta
+<ul>
+<li>
+<ol>
+<li>'Waste', e.g. <em>ligeant do rud dul i vásta.</em></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>'Waist' e.g. <em>óm vásta síos</em>.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>urchar
+<ul>
+<li>Said <em>rochar</em>; <em>faid rochar méaróige</em> 'a stone's throw'.</li>
+</ul>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="the_copula.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="the_copula.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
