@@ -1,0 +1,390 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Adjectives - The Living Language - Corca Dhuibhne</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="translators_note.html">Translator's Note</a></li><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="pronunciation_points.html"><strong aria-hidden="true">1.</strong> Pronunciation Points</a></li><li class="chapter-item expanded "><a href="nouns.html"><strong aria-hidden="true">2.</strong> Nouns</a></li><li class="chapter-item expanded "><a href="adjectives.html" class="active"><strong aria-hidden="true">3.</strong> Adjectives</a></li><li class="chapter-item expanded "><a href="pronouns.html"><strong aria-hidden="true">4.</strong> Pronouns</a></li><li class="chapter-item expanded "><a href="possessive_particles.html"><strong aria-hidden="true">5.</strong> Possessive Particles</a></li><li class="chapter-item expanded "><a href="prepositions.html"><strong aria-hidden="true">6.</strong> Prepositions</a></li><li class="chapter-item expanded "><a href="numbers.html"><strong aria-hidden="true">7.</strong> Numbers</a></li><li class="chapter-item expanded "><a href="verbs.html"><strong aria-hidden="true">8.</strong> Verbs</a></li><li class="chapter-item expanded "><a href="the_copula.html"><strong aria-hidden="true">9.</strong> The Copula</a></li><li class="chapter-item expanded "><a href="vocabulary.html"><strong aria-hidden="true">10.</strong> Vocabulary</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Living Language - Corca Dhuibhne</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="3-adjectives"><a class="header" href="#3-adjectives">3 Adjectives</a></h1>
+<h2 id="31"><a class="header" href="#31">3.1</a></h2>
+<p>An account is given below on the forms of the adjectives under these headings:</p>
+<ul>
+<li>The genitive singular</li>
+<li>The nominative plural</li>
+<li>The comparative form (the form used after <em>níos, is</em>).</li>
+</ul>
+<p>The dative singular and genitive plural don't appear exceppt in a handful of set phrases (for example <em>ar an dTráig Bháin, máthair leanbh óg</em>). The genitive singular is going the same way, and it's often that the nominative singular is used to qualify a noun in the plural. The only part of adjective inflection that's surviving well is the comparative form.</p>
+<p>A description of adjective lention is found in 3.5 below.</p>
+<h2 id="32-the-genitive-singular"><a class="header" href="#32-the-genitive-singular">3.2 The genitive singular</a></h2>
+<p>Some single syllable adjectives are put into the genitive singular when they're used with certain nouns, e.g. the adjectives <em>bán, bocht, dubh, fuar, glas, marbh, muar, óg</em> in phrases like <em>arán bán, duine bocht, móin dhubh, féar glas, uisce fuar, duine marbh, baile muar, bean óg.</em> The masculine inflection corresponds to a class 1 noun (<em>bád, an bháid</em>); the feminine inflection corresponds to a noun of class 2 (<em>cos, na coise</em>); here are some examples of adjectives in the genitive singular:</p>
+<ul>
+<li><em>bollóg ráin bháin</em></li>
+<li><em>leas an duine bhoicht</em></li>
+<li><em>cruach mhóna duibhe</em></li>
+<li><em>braon uisce fuair</em></li>
+<li><em>a' túirt an fhéir ghlais</em></li>
+<li><em>éadach duine mairbh</em></li>
+<li><em>fear baile muair</em></li>
+<li><em>athair na mná óige</em></li>
+</ul>
+<p>Polysyllabic adjectives are rarely put in the genitive singular, for example the ones ending in <em>-ach.</em> Sometimes <em>déanach</em> is inflected:</p>
+<ul>
+<li><em>aimsir an chogaig dhéanaig</em></li>
+</ul>
+<p>But it's more often left uninflected:</p>
+<ul>
+<li><em>le linn a' choga d(h)éanach</em></li>
+</ul>
+<p>Outside of the phrases shown above, it's normal to leave the adjective uninflected, whether or not the noun is in the genitive:</p>
+<ul>
+<li><em>bun an ghoirt caol</em></li>
+<li><em>bileoga gabáiste glas</em></li>
+<li><em>ar fea tamall muar</em></li>
+</ul>
+<h2 id="33-the-nominative-plural"><a class="header" href="#33-the-nominative-plural">3.3 The nominative plural</a></h2>
+<p><em>-a</em> is added to adjectives ending with a broad consonant, e.g. <em>tithe deasa.</em> <em>-e</em> is added to some of the adjectives ending on a slender consonant, e.g. <em>daoine aite;</em> the last consonant is broadened in the others and <em>-a</em> is added to them, e.g. <em>daoine gliuc, ceisteanna deacara, scéalta suímiúla.</em> <em>-tha</em> is added to monosyllabic adjectives ending in a back vowel, e.g. <em>amhráin bhreátha;</em> <em>-the</em> is added to those ending in a front vowel, e.g. <em>mísleáin bhuíthe.</em></p>
+<p>The final consonant is lost in these:</p>
+<ul>
+<li><em>garbh - garú</em></li>
+<li><em>marbh - marú</em></li>
+<li><em>searbh - searú</em></li>
+<li><em>folamh - folú</em></li>
+<li><em>cruaig - crua</em></li>
+<li><em>réig - ré</em></li>
+<li><em>dubh - dú</em></li>
+<li><em>tiubh - tiú</em></li>
+</ul>
+<p>There are two plurals for <em>milis:</em></p>
+<ul>
+<li><em>milis - mílse, mísle</em></li>
+</ul>
+<p>Often a noun in the plural is qualified by an adjective in the singular, especially if it's a polysyllabic adjective.</p>
+<ul>
+<li><em>áiteanna contúrthach</em></li>
+<li><em>rudaí difriúil</em></li>
+<li><em>boscaí folamh</em></li>
+<li><em>tithe íseal</em></li>
+</ul>
+<p>Monosyllabic adjectives are most often left in the singular when there's another qualifiying word is after it or when there's a prefix before it:</p>
+<ul>
+<li><em>buachaillí muar groí</em></li>
+<li><em>bróga breá triuma</em></li>
+<li><em>daoine ana-bhreá</em></li>
+</ul>
+<h2 id="34-the-comparative-form"><a class="header" href="#34-the-comparative-form">3.4 The comparative form</a></h2>
+<p>The comparative form is used to make the comparative degree and superlative . (e.g. <em>muar,</em> comparative form <em>mó</em>, comparative degree <em>níos mó,</em> superlative <em>is mó</em>). Every adjective ending in a consonant and a good few ending in vowels have a comparative form, as we see below; the most importants ones lacking a comparative form are polysyllabic ones ending in a vowel, e.g. <em>tanaí (níos tanaí, is tanaí).</em></p>
+<p>The comparative is formed as follows:</p>
+<p>(i) Adjectives ending in a broad consonant:</p>
+<ul>
+<li>Slenderisation + <em>-e</em></li>
+<li><em>óg - óige</em></li>
+<li><em>leathan - leithine</em></li>
+<li><em>ciallmhar - ciallmhaire</em></li>
+</ul>
+<p>(ii) Pollysyllabic adjectives ending in <em>-ach</em></p>
+<ul>
+<li><em>-(e)ach</em> to <em>(a)í</em></li>
+</ul>
+<ul>
+<li><em>díreach - dírí</em></li>
+<li><em>cóngarach - cóngaraí</em></li>
+</ul>
+<p>(iii) Adjectives ending in a slender consonant:</p>
+<ul>
+<li>(a) + <em>-e</em></li>
+<li><em>ait - aite</em></li>
+<li><em>láidir - láidire</em></li>
+<li>(b) leathnú + <em>-a</em></li>
+<li><em>glic - gliuca</em></li>
+<li><em>deacair - deacara</em></li>
+<li><em>áisiúil - áisiúla</em></li>
+</ul>
+<p>(iv) Polysyllabic adjectives ending in <em>-a</em></p>
+<ul>
+<li>Slenderisation before <em>-a</em></li>
+<li><em>críonna - crínne</em></li>
+<li><em>macánta - macáinte</em></li>
+<li><em>fada - fuide</em></li>
+</ul>
+<p>Not every adjective of this sort is inflected, e.g. <em>sásta.</em></p>
+<p>(iv) Single syllable adjectives ending in a long vowel or diphthong:</p>
+<ul>
+<li><em>-tha</em> with a back vowel - <em>breá - breátha</em></li>
+<li><em>-the</em> with a front vowel - <em>buí - buíthe</em></li>
+</ul>
+<p>There's a trend to broaden the ending <em>-(a)í</em> from (ii) to (i) and (iii). There's a choice between the following forms:</p>
+<ul>
+<li><em>ciallmhaire - ciallmhairí</em></li>
+<li><em>deacara - deacaraí</em></li>
+<li><em>dísle - díslí</em></li>
+<li><em>sláintiúla - sláintiúlaí</em></li>
+</ul>
+<p>Perhaps these below always have <em>-í</em> instead of <em>-e:</em></p>
+<ul>
+<li><em>baech - baehí</em></li>
+<li><em>lách - láhí</em></li>
+<li><em>dócha - dóhí</em></li>
+<li><em>minic - minicí</em></li>
+</ul>
+<p>These have irregular comparative forms:</p>
+<ul>
+<li><em>álainn - áille</em> (or <em>álainne</em>)</li>
+<li><em>beag - lú</em></li>
+<li><em>baech</em> (buíoch) - <em>baehúla</em> (or <em>baehí</em>)</li>
+<li><em>cóir - córta, córtaí</em></li>
+<li><em>cruaig - crua</em></li>
+<li><em>dubh - duí</em></li>
+<li><em>fada - sia</em> (or <em>fuide</em>)</li>
+<li><em>f(ui)rist - fusa</em> (or <em>fiosa</em>)</li>
+<li><em>leathan - leithe</em> (or <em>leithine</em>)</li>
+<li><em>maith - fearr</em></li>
+<li><em>muar - mó, mú</em></li>
+<li><em>olc - measa</em></li>
+<li><em>ramhar - ruíre</em> (old form: <em>raimhe</em> /rai/)</li>
+<li><em>réig - ré, réigiúla</em></li>
+<li><em>slach - suilihe</em></li>
+<li><em>tapaig - tapúla</em></li>
+<li><em>te - teó</em></li>
+<li><em>tiubh - tiú</em></li>
+<li><em>tréan - treise</em></li>
+</ul>
+<h2 id="35-lenition-of-adjectives"><a class="header" href="#35-lenition-of-adjectives">3.5 Lenition of adjectives</a></h2>
+<p>Singular adjectives are lenited after</p>
+<p>(i) a feminine noun in the nominative: <em>bó bhán, an bhó bhán</em><br />
+(ii) a masculine noun in the genitive singular: <em>únaeir an mhotair bhuí</em><br />
+(iii) a masculine noun which is subject to a preposition which lenites: <em>sa chogadh mhuar, san oileán mhuar</em></p>
+<p>Adjectives in the plural are lenited after</p>
+<p>(iv) plural nouns ending in a slender consonant: <em>báid mhuara, capaill bhána, lacain bhána.</em></p>
+<p>Regarding (ii) above, when there isn't an inflection on the noun it's often that the adjective isn't lenited:</p>
+<ul>
+<li><em>aimsir an chogadh déanach</em></li>
+</ul>
+<h2 id="36-the-demonstrative-adjective"><a class="header" href="#36-the-demonstrative-adjective">3.6 The demonstrative adjective</a></h2>
+<p>The forms <em>so, son/sun, súd</em> are used after broad consonants or back vowels and <em>seo, sin, siúd</em> after slender consonants or front vowels.</p>
+<ul>
+<li>
+<p><em>an ceann so - an bhó so</em></p>
+</li>
+<li>
+<p><em>an ceann son/sun - an bhó son/sun</em></p>
+</li>
+<li>
+<p><em>an ceann úd - an bhó úd</em></p>
+</li>
+<li>
+<p><em>an áit seo - an duine seo</em></p>
+</li>
+<li>
+<p><em>an áit sin - an duine sin</em></p>
+</li>
+<li>
+<p><em>an áit úd - an duine úd</em></p>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="nouns.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="pronouns.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="nouns.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="pronouns.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -19,7 +19,7 @@ The genitive singular is made in one of the following ways. Pattern 14 and 15 ar
 | 2 *cos* b       | slenderisation + *-e* | *bonn na coise*      |
 | 3 *éadach* f    | *-ach* to *-ig*       | *cluth éadaig*       |
 | 4 *báisteach* b | *-ach*  to *-í*       | *cith bháistí*       |
-| 5 *áit* b       | *-e*                  | *tipmeall na háite*  |
+| 5 *áit* b       | *-e*                  | *timpeall na háite*  |
 | 6 *drom* f/b    | *-a*                  | *tinneas droma*      |
 | 7 *abhainn* b   | broadening            | *bruach na habhann*  |
 | 8 *móin* b      | broadening + *-a*     | *a' baint mhóna*     |

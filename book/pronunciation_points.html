@@ -1,0 +1,440 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Pronunciation Points - The Living Language - Corca Dhuibhne</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="translators_note.html">Translator's Note</a></li><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="pronunciation_points.html" class="active"><strong aria-hidden="true">1.</strong> Pronunciation Points</a></li><li class="chapter-item expanded "><a href="nouns.html"><strong aria-hidden="true">2.</strong> Nouns</a></li><li class="chapter-item expanded "><a href="adjectives.html"><strong aria-hidden="true">3.</strong> Adjectives</a></li><li class="chapter-item expanded "><a href="pronouns.html"><strong aria-hidden="true">4.</strong> Pronouns</a></li><li class="chapter-item expanded "><a href="possessive_particles.html"><strong aria-hidden="true">5.</strong> Possessive Particles</a></li><li class="chapter-item expanded "><a href="prepositions.html"><strong aria-hidden="true">6.</strong> Prepositions</a></li><li class="chapter-item expanded "><a href="numbers.html"><strong aria-hidden="true">7.</strong> Numbers</a></li><li class="chapter-item expanded "><a href="verbs.html"><strong aria-hidden="true">8.</strong> Verbs</a></li><li class="chapter-item expanded "><a href="the_copula.html"><strong aria-hidden="true">9.</strong> The Copula</a></li><li class="chapter-item expanded "><a href="vocabulary.html"><strong aria-hidden="true">10.</strong> Vocabulary</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Living Language - Corca Dhuibhne</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="1-pronunciation-points"><a class="header" href="#1-pronunciation-points">1. Pronunciation Points</a></h1>
+<h2 id="11-vocal-stress"><a class="header" href="#11-vocal-stress">1.1 Vocal Stress</a></h2>
+<p>Stress can fall either on the first, second or third syllable of a word based on the rules given below; the stressed part is shown with bold letters.</p>
+<p>The stress falls</p>
+<p>(i) on the second syllable if it's a long vowel or <em>-ach</em>:</p>
+<ul>
+<li><em>cai<strong>lín</strong>, cai<strong>lín</strong>í</em></li>
+<li><em>amh<strong>rán</strong>, amh<strong>rán</strong>aí, amh<strong>rán</strong>aíocht</em></li>
+<li><em>pa<strong>cáil</strong>, pa<strong>cál</strong>ann</em></li>
+</ul>
+<p>If the first syllable has a short vowel, the stress falls on <em>ach</em> in the second syllable:</p>
+<ul>
+<li><em>ba<strong>cach</strong>, tuir<strong>seach</strong>, cas<strong>ach</strong>tach</em></li>
+</ul>
+<p>The stress isn't on <em>-ach</em> if <em>-th-</em> is the consonant before it or if there's a long vowel in the first syllable:</p>
+<ul>
+<li><em><strong>fath</strong>ach</em></li>
+<li><em><strong>brón</strong>ach</em></li>
+<li><em><strong>dath</strong>acha</em></li>
+<li><em><strong>éist</strong>eacht</em></li>
+</ul>
+<p>(ii) on the third syllable if it's a long vowel and the two vowels before it are short</p>
+<ul>
+<li><em>achai<strong>ní</strong></em></li>
+<li><em>asa<strong>chán</strong></em></li>
+<li><em>feir(i)<strong>meoir</strong></em></li>
+</ul>
+<p>(iii) on the first syllable when (i) and (ii) don't apply. So you have:</p>
+<ul>
+<li><em><strong>cap</strong>all</em></li>
+<li><em><strong>ár</strong>aistí</em></li>
+<li><em><strong>im</strong>(i)leacán</em></li>
+<li><em><strong>carr</strong>aigeacha</em></li>
+<li><em><strong>cún</strong>tanós</em></li>
+<li><em><strong>sath</strong>(a)raintí</em></li>
+<li><em><strong>fogh</strong>laim</em></li>
+<li><em><strong>úd</strong>arás</em></li>
+<li><em><strong>aif</strong>(i)rinntí</em></li>
+<li><em><strong>brón</strong>ach</em></li>
+<li><em><strong>út</strong>amáil</em></li>
+</ul>
+<h2 id="exceptions"><a class="header" href="#exceptions">Exceptions</a></h2>
+<p>(i) It's normal, particularly in some set phrases, to move the stress from the last syllable to the first syllable of a word when the word is followed by a stressed syllable:</p>
+<ul>
+<li><em>cail<strong>ín</strong> - <strong>cail</strong>ín <strong>óg</strong></em></li>
+<li><em>gair<strong>dín</strong> - <strong>gair</strong>dín <strong>úll</strong></em></li>
+<li><em>múin<strong>teoir</strong> - <strong>múin</strong>teoir <strong>scoil</strong>e</em></li>
+<li><em>feir(i)<strong>meoir</strong> - <strong>feir</strong>(i)meoir <strong>muar</strong></em></li>
+</ul>
+<p>(ii) According to the rules given already, the stress falls on the first syllable in words with the vowel pattern long-short-long e.g. <em><strong>úd</strong>arás, <strong>út</strong>amáil, <strong>cún</strong>tanós.</em> There are exceptions relating to the forms of verbs and adjectives. In second conjugation verbs it's always the <em>-(a)í-</em> or the <em>-(e)ó-</em> which is stressed, even if that's in the third syllable. Therefore:</p>
+<ul>
+<li><em>cea<strong>nnaíonn</strong> cea<strong>nnóig</strong></em></li>
+<li><em>foghla<strong>maíonn</strong> foghla<strong>móig</strong></em></li>
+<li><em>fóg(a)<strong>raíonn</strong> fóg(a)<strong>róig</strong></em></li>
+</ul>
+<p>Some speakers stress the <em>-(a)í</em> in comparative forms of adjectives:</p>
+<ul>
+<li><em><strong>cúr</strong>amach</em></li>
+<li><em>níos cúra<strong>maí</strong> / cúiri<strong>mí</strong></em></li>
+</ul>
+<p>However the <em>-(a)í</em> isn't stressed in the third syllable if there's a long vowel before it:</p>
+<ul>
+<li><em>sao<strong>ráid</strong>each níos sao<strong>ráid</strong>í</em></li>
+</ul>
+<p>(iii) The stress falls on the first syllable in the following words despite the above rules: <em>an t-<strong>áir</strong>seoir, <strong>at</strong>urnae, <strong>buíoc</strong>án (uibh), <strong>Cait</strong>leacaí, <strong>eidhn</strong>eán, <strong>geal</strong>acán (uibh), <strong>lamhan</strong>cán, <strong>lamhn</strong>án.</em>
+The first syllable is stressed in lots of loans from English as well, e.g. <em><strong>baits</strong>iléir, <strong>boc</strong>aidí</em> (iolra), <em><strong>fiú</strong>saí, <strong>meag</strong>alsaí</em> (iolra).</p>
+<h2 id="12-loss-of-vowels-in-the-syllable-before-the-stress"><a class="header" href="#12-loss-of-vowels-in-the-syllable-before-the-stress">1.2 Loss of Vowels in the Syllable before the Stress</a></h2>
+<p>The short vowel is lost in the syllable before the stress in many words, if <em>r</em>, <em>l</em>, or <em>n</em> are following that vowel:</p>
+<ul>
+<li>an t-arán <em>an trán</em> </li>
+<li>dearóil <em>dreoil</em></li>
+<li>corrán <em>crán</em> </li>
+<li>barróg <em>bróg</em></li>
+<li>ballach <em>blach</em> </li>
+<li>folláin <em>fláin</em></li>
+<li>galánta <em>glánta</em> </li>
+<li>ceannach <em>cneach</em></li>
+<li>milleán <em>mleán</em> </li>
+<li>biorán <em>breán</em></li>
+<li>coileach <em>cleach</em> </li>
+<li>gearán <em>greán</em></li>
+<li>paróiste <em>próiste</em> </li>
+<li>bullán <em>blán</em></li>
+<li>coileán <em>cleán</em> </li>
+<li>giorracht <em>greacht</em></li>
+<li>salach <em>slach</em> </li>
+<li>bullóg <em>blóg</em></li>
+<li>coiléar <em>cléar</em></li>
+<li>mallacht <em>mlacht</em></li>
+<li>sparán <em>sprán</em></li>
+<li>cailleach <em>cleach</em></li>
+<li>coláiste <em>cláiste</em> </li>
+<li>mullach <em>mlach</em></li>
+<li>bileog <em>bleog</em></li>
+</ul>
+<p>This leaves the following pairs as homophones</p>
+<ul>
+<li><em>coileach/cailleach</em></li>
+<li><em>barróg/bróg</em></li>
+</ul>
+<h2 id="13-the-minicmnic-change"><a class="header" href="#13-the-minicmnic-change">1.3 The <em>minic/mnic</em> Change</a></h2>
+<p>In certain words, two syllables fall together, when <em>r</em>, <em>l</em>, <em>n</em> are separating them. The dialectal pronunciation is given on the right below:</p>
+<ul>
+<li>boladh <em>bla</em></li>
+<li>chonac <em>chnuc</em></li>
+<li>chonaic <em>chnuic</em></li>
+<li>conas <em>conas/cnus a bhí agat?</em></li>
+<li>culaith <em>cluth éadaigh</em></li>
+<li>dorcha <em>drocha</em> (or <em>doracha</em>)</li>
+<li>minic <em>is minic/minc</em></li>
+<li>fuiriste <em>fuirist/frist</em></li>
+<li>tirim <em>trim/tirim</em></li>
+</ul>
+<h2 id="14-loss-of--bh---mh--between-two-vowels"><a class="header" href="#14-loss-of--bh---mh--between-two-vowels">1.4 Loss of <em>-bh-</em>, <em>-mh-</em> Between Two Vowels</a></h2>
+<p>A stressed vowel + <em>bh/mh</em> + a weak vowel are made into a long vowel, as shown on the right below:</p>
+<ul>
+<li><em>-bh-</em> 
+<ul>
+<li>beart craoibhe <em>beart craoi</em></li>
+</ul>
+<ul>
+<li>éadaí dubha <em>éadaí dú</em></li>
+<li>daoine garbha <em>daoine garú</em></li>
+<li>ainmhithe marbha <em>ainmhithe marú</em></li>
+<li>Ceann Sléibhe <em>Cleann Slé</em></li>
+</ul>
+</li>
+<li><em>-mh-</em> 
+<ul>
+<li>fómhar <em>fór</em></li>
+</ul>
+<ul>
+<li>do lámha <em>do lá</em></li>
+<li>droim do láimhe <em>droim do lá</em></li>
+<li>muintir na Gaillimhe <em>muintir na Gaillí</em></li>
+<li>ualach gainimhe <em>ualach gainí</em></li>
+<li>buidéil folmha <em>buidéil folú</em></li>
+</ul>
+</li>
+</ul>
+<p>There's some words or forms of words where the <em>-bh-</em> or the <em>-mh-</em> is said, e.g. <em>cléibheanna, luibheanna, amharc.</em></p>
+<h2 id="15--idh-and--igh-at-the-end-of-words"><a class="header" href="#15--idh-and--igh-at-the-end-of-words">1.5 <em>-idh</em> and <em>-igh</em> at the End of Words</a></h2>
+<p>Usually these are said like <em>-ig</em>:</p>
+<ul>
+<li>tigh <em>tig</em></li>
+<li>cheannaigh <em>cheannaig</em></li>
+<li>trá(igh) <em>tráig</em></li>
+<li>anuraidh <em>anuirig</em></li>
+<li>crua(idh) <em>cruaig</em></li>
+<li>thuaidh <em>thuaig</em></li>
+<li>ceannóidh <em>ceannóig</em></li>
+<li>leaba(idh) <em>leabaig</em></li>
+<li>déanfaidh <em>déanhaig</em></li>
+<li>beidh <em>beig</em></li>
+<li>chuaigh <em>chuaig</em></li>
+<li>suigh <em>suig</em></li>
+</ul>
+<h2 id="exceptions-1"><a class="header" href="#exceptions-1">Exceptions</a></h2>
+<p>The <em>dh/gh</em> is dropped in the following situations:
+(i) In multisyllabic words, before a pronoun acting as a subject:</p>
+<ul>
+<li><em>cheanna sé tig</em></li>
+<li><em>ní cheannó siad é</em></li>
+<li><em>déanha mé é sin</em></li>
+</ul>
+<p>The <em>g</em> sound isn't dropped before a pronoun acting as an object:</p>
+<ul>
+<li><em>sin é a mhíneoig tu</em></li>
+</ul>
+<p>(ii) In the single syllable verb forms <em>beig</em>, <em>chuaig</em>, and <em>g(h)eóig (= g(h)eobhaidh)</em>, before a pronoun acting as a subject:</p>
+<ul>
+<li><em>be mé, be tú, be sé...be siad</em></li>
+<li><em>chua sé, chua sí</em></li>
+<li><em>g(h)eó mé, g(h)eó tú, g(h)eó sé...g(h)eó siad</em></li>
+</ul>
+<p>The <em>g</em> is said in other single syllable forms:</p>
+<ul>
+<li><em>shuig sé síos</em></li>
+<li><em>luig sé síos</em></li>
+<li><em>bhuaig sé air</em></li>
+<li><em>chráig sé mi</em></li>
+</ul>
+<p>(iii) In surnames ending in <em>-(a)igh</em>, usually:</p>
+<ul>
+<li><em>Ó Loínse</em></li>
+<li><em>Ó Dála</em></li>
+</ul>
+<p>The <em>g</em> is said in the genitive case of the words <em>Loínseach, Dálach</em> etc.</p>
+<ul>
+<li><em>tig an Loínsig</em></li>
+<li><em>tig an Dálaig</em></li>
+</ul>
+<p>(iv) In the word <em>tráig</em> when it's in the placenames <em>Trá Lí, Trá Bheag, Fionntrá.</em></p>
+<h2 id="16--ing-and--inn"><a class="header" href="#16--ing-and--inn">1.6 <em>-ing</em> and <em>-inn</em></a></h2>
+<p>These are all said with <em>-in</em>:</p>
+<ul>
+<li>fairsing <em>fairsin</em></li>
+<li>scilling <em>scillin</em></li>
+<li>dúinn <em>dúin</em></li>
+<li>againn <em>a<strong>guin</strong></em></li>
+</ul>
+<h2 id="17-vowel-change-before--ll--nn--rr-and--m"><a class="header" href="#17-vowel-change-before--ll--nn--rr-and--m">1.7 Vowel Change before <em>-ll, -nn, -rr and -m</em></a></h2>
+<p>Short vowels before these consonants are made into diphthongs or long vowels. For example, /ou/ is said in <em>crann, poll am;</em> the diphthong /ai/ is said in <em>caill, faill;</em> the long vowel /i:/ is said in <em>coill, fill, binn, im;</em> and the long vowel /a:/ is said in <em>barr, gearr</em>. When an epenthetic vowel is put in words like these however, that lengthening does not occur. The following vowel changes exist:</p>
+<div class="table-wrapper"><table><thead><tr><th>Lengthening</th><th>No Lengthening</th></tr></thead><tbody>
+<tr><td><em>crann</em> /ou/</td><td><em>crannaíocha</em> /a/</td></tr>
+<tr><td><em>poll</em> /ou/</td><td><em>polladh</em> /o/</td></tr>
+<tr><td><em>am</em> /ou/</td><td><em>mórán ama</em> /a/</td></tr>
+<tr><td><em>caill</em> /ai/</td><td><em>cailliúint</em> /a/</td></tr>
+<tr><td><em>faill</em> /ai/</td><td><em>colúr faille</em> /a/</td></tr>
+<tr><td><em>coill</em> /i:/</td><td><em>maor coille</em> /i/</td></tr>
+<tr><td><em>fill</em> /i:/</td><td><em>filleadh</em> /i/</td></tr>
+<tr><td><em>binn</em> /i:/</td><td><em>airde na binne</em> /i/</td></tr>
+<tr><td><em>im</em> /i:/</td><td><em>blúire ime</em> /i/</td></tr>
+<tr><td><em>barr</em> /a:/</td><td><em>barraíocha</em> /a/</td></tr>
+<tr><td><em>gearr</em> /a:/</td><td><em>gearradh</em> /a/</td></tr>
+</tbody></table>
+</div>
+<p>Of course, it's the  long vowel or diphthong that's said when the <em>ll, nn, rr</em> is directly followed by a consonant; /ai/ is siad in <em>caillte</em>, /i:/ in <em>fillte</em> and /a:/ in <em>bearrtha.</em></p>
+<h2 id="18-éa"><a class="header" href="#18-éa">1.8 <em>éa</em></a></h2>
+<p><em>éa</em> (i.e. the vowel é before a broad consonant) is said as the diphthong /ia/ or /iə/:</p>
+<ul>
+<li><em>éan</em> /ian/ or /iən/</li>
+<li><em>féar</em> /f´iar/ or /f´iər/</li>
+<li><em>béal</em> /b´ial/ or /b´iəl/</li>
+</ul>
+<p>/e:/ is said in songs and poetry, for example <em>ar fharraigí tréana.</em> /e:/ is also said in the second syllable, e.g. <em>buidéal, siúinéara;</em> after <em>r</em>, e.g. <em>réab, réal;</em> in the verbs <em>léann, téann;</em> and in words like <em>véarsa, léas ('lease, lace'), gléas ('shine')</em> and <em>mo léan.</em> <em>éi</em> stays as /e:/, for example in the genitive forms <em>éin, féir, béil buidéil.</em></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="nouns.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="nouns.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -37,7 +37,7 @@ Tables of the verb forms of *dúnann, glaenn,* and *ceannaíonn* in 8.5-8..7 bel
 | ------------------- | ---------------------- | ---------- |
 | 1. *cuirim*         | *cuirimíd*             |            |
 | 2. *cuireann tú*    | *cuireann sibh*        |            |
-| 3. *cuireann sé/sí* | *cuireann siad/cuirid* | *cuirtear* |
+| 3. *cuireann sé/sí* | *cuireann siad/cuirid* | *cuirtar* |
 
 **Future:** *cuirhig*
 
