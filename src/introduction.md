@@ -5,7 +5,7 @@ The principal parts of speech are described and samples from living speech are g
 
 An account of the adverbs or the conjunctions couldn't be done in a short work like this, but certain adverbs will be found in the chapter on vocabulary. That chapter contains a personal selection of the author, and it's certain that absences will be noted, but the information presented  there should be interesting nevertheless.
 
-I'm truly grateful to the people in Corca Dhuibhne whose sepeech I've studied, and to the following people who read drafts of this work: Pádraig Ua Maoileoin above any body else, plus Liam P. Ó Murchú, Pádraig Tyers and Dónall P. Ó Baoill. I'm also grateful to Seán Ua Súilleabháin for sharing his knolwedge and opinions with me, and to Áine Ní Chonghaile who typset the text.
+I'm truly grateful to the people in Corca Dhuibhne whose sepeech I've studied, and to the following people who read drafts of this work: Pádraig Ua Maoileoin above any body else, plus Liam P. Ó Murchú, Pádraig Tyers and Dónall P. Ó Baoill. I'm also grateful to Seán Ua Súilleabháin for sharing his knowledge and opinions with me, and to Áine Ní Chonghaile who typset the text.
 
 #### Pronunciation symbols
 Symbols had to be relied on here and there. It's worth mentioning some of them:
